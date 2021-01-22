@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">Floads-Driver</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tv_masuk">Masuk</string>
+    <string name="tv_welcome">Selamat Datang Di Floads</string>
+    <string name="tv_email">Email</string>
+    <string name="hint_email">cth.nama@gmail.com</string>
+    <string name="ic_email">email</string>
+    <string name="tv_password">Password</string>
+    <string name="hint_password">*******************</string>
+    <string name="tv_prefix_forgotPass">Lupa password ?</string>
+    <string name="tv_reset_password">Reset Password</string>
+    <string name="bt_masuk">Masuk</string>
+    <string name="tv_daftar">Daftar</string>
+    <string name="tv_no_account">Belum punya akun ?</string>
+    <string name="tv_atau">atau</string>
+    <string name="facebook_login">Facebook Logo</string>
+    <string name="bt_facebook">Masuk dengan Facebook</string>
 </resources>

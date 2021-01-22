@@ -1,7 +1,10 @@
 package com.floadsbjm.driver
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.res.Resources
+import android.graphics.Color
+import android.os.Build
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
