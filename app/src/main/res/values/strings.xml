@@ -21,4 +21,10 @@
     <string name="line_defines_screen">Line that defines which screen in Registration</string>
     <string name="tv_namaLengkap">Nama Lengkap</string>
     <string name="container_editText">Container for Edit Text</string>
+    <string name="tv_nomorKTP">Nomor KTP</string>
+    <string name="ed_nomorKTP">63xxxxxxxxxxxxxx</string>
+    <string name="tv_nomorTelepon">Nomor Telepon (WhatsApp)</string>
+    <string name="countryCodeTelp">Kode Negara Nomor Telepon</string>
+    <string name="idCountryCode">+62</string>
+    <string name="ed_nomorTelepon">812-xxxx-xxxx</string>
 </resources>

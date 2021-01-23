@@ -42,6 +42,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
+            <!-- View for Nama Lengkap -->
             <TextView
                 android:id="@+id/tv_namaLengkap"
                 android:layout_width="0dp"
@@ -72,12 +73,12 @@
                 android:id="@+id/ed_namaLengkap"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="12dp"
                 android:layout_marginStart="12dp"
-                android:autofillHints="Nama Lengkap"
+                android:layout_marginEnd="12dp"
                 android:background="@android:color/transparent"
                 android:fontFamily="@font/manrope_regular"
                 android:hint="@string/tv_namaLengkap"
+                android:importantForAutofill="no"
                 android:inputType="textPersonName"
                 android:text="@string/tv_namaLengkap"
                 android:textColor="@color/grey"
@@ -86,6 +87,121 @@
                 app:layout_constraintEnd_toEndOf="@+id/container_edNamaLengkap"
                 app:layout_constraintStart_toStartOf="@+id/container_edNamaLengkap"
                 app:layout_constraintTop_toTopOf="@+id/container_edNamaLengkap" />
+
+            <!-- View for Nomor KTP -->
+            <TextView
+                android:id="@+id/tv_nomorKTP"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="33dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/manrope_regular"
+                android:text="@string/tv_nomorKTP"
+                android:textColor="@color/dim_grey"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/container_edNamaLengkap" />
+
+            <ImageView
+                android:id="@+id/container_edNomorKTP"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="33dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginEnd="33dp"
+                android:background="@drawable/ic_edit_text_bar"
+                android:contentDescription="@string/container_editText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_nomorKTP" />
+
+            <EditText
+                android:id="@+id/ed_nomorKTP"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/manrope_regular"
+                android:hint="@string/tv_nomorKTP"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:text="@string/ed_nomorKTP"
+                android:textColor="@color/grey"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/container_edNomorKTP"
+                app:layout_constraintEnd_toEndOf="@+id/container_edNomorKTP"
+                app:layout_constraintStart_toStartOf="@+id/container_edNomorKTP"
+                app:layout_constraintTop_toTopOf="@+id/container_edNomorKTP" />
+
+            <!-- View for Nomor Telepon -->
+            <TextView
+                android:id="@+id/tv_nomorTelepon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="33dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/manrope_regular"
+                android:text="@string/tv_nomorTelepon"
+                android:textColor="@color/dim_grey"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/container_edNomorKTP" />
+
+            <ImageView
+                android:id="@+id/iv_prefix_nomorTelepon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="33dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ic_sub_rectangle"
+                android:contentDescription="@string/countryCodeTelp"
+                app:layout_constraintBottom_toBottomOf="@+id/container_edNomorTelepon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_nomorTelepon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/manrope_regular"
+                android:text="@string/idCountryCode"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_prefix_nomorTelepon"
+                app:layout_constraintEnd_toEndOf="@+id/iv_prefix_nomorTelepon"
+                app:layout_constraintStart_toStartOf="@+id/iv_prefix_nomorTelepon"
+                app:layout_constraintTop_toTopOf="@+id/iv_prefix_nomorTelepon" />
+
+            <ImageView
+                android:id="@+id/container_edNomorTelepon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:layout_marginEnd="33dp"
+                android:background="@drawable/ic_edit_text_bar"
+                android:contentDescription="@string/container_editText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/iv_prefix_nomorTelepon"
+                app:layout_constraintTop_toBottomOf="@id/tv_nomorTelepon" />
+
+            <EditText
+                android:id="@+id/ed_nomorTelepon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="21dp"
+                android:layout_marginEnd="12dp"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/manrope_regular"
+                android:hint="@string/tv_nomorTelepon"
+                android:importantForAutofill="no"
+                android:inputType="phone"
+                android:text="@string/ed_nomorTelepon"
+                android:textColor="@color/grey"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/container_edNomorTelepon"
+                app:layout_constraintEnd_toEndOf="@+id/container_edNomorTelepon"
+                app:layout_constraintStart_toStartOf="@+id/container_edNomorTelepon"
+                app:layout_constraintTop_toTopOf="@+id/container_edNomorTelepon" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
