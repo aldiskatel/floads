@@ -4,7 +4,7 @@
     <string name="tv_masuk">Masuk</string>
     <string name="tv_welcome">Selamat Datang Di Floads</string>
     <string name="tv_email">Email</string>
-    <string name="hint_email">cth.nama@gmail.com</string>
+    <string name="hint_email">cth.nama@email.com</string>
     <string name="ic_email">email</string>
     <string name="tv_password">Password</string>
     <string name="hint_password">*******************</string>
@@ -16,4 +16,9 @@
     <string name="tv_atau">atau</string>
     <string name="facebook_login">Facebook Logo</string>
     <string name="bt_facebook">Masuk dengan Facebook</string>
+    <string name="iv_arrow">Arrow Back Button</string>
+    <string name="bt_lanjut">Lanjut</string>
+    <string name="line_defines_screen">Line that defines which screen in Registration</string>
+    <string name="tv_namaLengkap">Nama Lengkap</string>
+    <string name="container_editText">Container for Edit Text</string>
 </resources>
