@@ -27,4 +27,19 @@
     <string name="countryCodeTelp">Kode Negara Nomor Telepon</string>
     <string name="idCountryCode">+62</string>
     <string name="ed_nomorTelepon">812-xxxx-xxxx</string>
+    <string name="tv_jenisKelamin">Jenis Kelamin</string>
+    <string name="radio_male">Laki-laki</string>
+    <string name="radio_female">Perempuan</string>
+    <string name="tv_tgl_lahir">Tanggal Lahir</string>
+    <string name="bt_simpan">Simpan</string>
+    <string name="tv_kota">Kota</string>
+    <string name="ed_kota">Cth. Banjarmasin</string>
+    <string name="tv_kecamatan">Kecamatan</string>
+    <string name="ed_kecamatan">Cth. Banjarmasin Barat</string>
+    <string name="tv_kelurahan">Kelurahan</string>
+    <string name="ed_kelurahan">Cth. Basirih</string>
+    <string name="tv_alamat">Alamat</string>
+    <string name="ed_alamat">Cth. Jalan-Komp...</string>
+    <string name="tv_pekerjaan">Pekerjaan</string>
+    <string name="ed_pekerjaan">Cth. Ojek Online</string>
 </resources>

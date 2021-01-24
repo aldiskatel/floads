@@ -1,14 +1,332 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.FragmentRegistrationThree">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <ImageButton
+        android:id="@+id/iv_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/ic_arrow"
+        android:contentDescription="@string/iv_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="10dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@id/iv_daftar_line_two"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_arrow">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_daftar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="29dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/manrope_bold"
+                android:text="@string/tv_daftar"
+                android:textColor="@color/black"
+                android:textSize="50sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- View for Kota -->
+            <TextView
+                android:id="@+id/tv_kota"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="33dp"
+                android:layout_marginTop="14dp"
+                android:fontFamily="@font/manrope_regular"
+                android:text="@string/tv_kota"
+                android:textColor="@color/dim_grey"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_daftar" />
+
+            <ImageView
+                android:id="@+id/container_edKota"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="33dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginEnd="33dp"
+                android:background="@drawable/ic_edit_text_bar"
+                android:contentDescription="@string/container_editText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_kota" />
+
+            <EditText
+                android:id="@+id/ed_kota"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/manrope_regular"
+                android:hint="@string/tv_kota"
+                android:importantForAutofill="no"
+                android:inputType="textCapCharacters"
+                android:text="@string/ed_kota"
+                android:textColor="@color/grey"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/container_edKota"
+                app:layout_constraintEnd_toEndOf="@+id/container_edKota"
+                app:layout_constraintStart_toStartOf="@+id/container_edKota"
+                app:layout_constraintTop_toTopOf="@+id/container_edKota" />
+
+            <!-- View for Kecamatan -->
+            <TextView
+                android:id="@+id/tv_kecamatan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="33dp"
+                android:layout_marginTop="17dp"
+                android:fontFamily="@font/manrope_regular"
+                android:text="@string/tv_kecamatan"
+                android:textColor="@color/dim_grey"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/container_edKota" />
+
+            <ImageView
+                android:id="@+id/container_edKecamatan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="33dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginEnd="33dp"
+                android:background="@drawable/ic_edit_text_bar"
+                android:contentDescription="@string/container_editText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_kecamatan" />
+
+            <EditText
+                android:id="@+id/ed_kecamatan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/manrope_regular"
+                android:hint="@string/ed_kecamatan"
+                android:importantForAutofill="no"
+                android:inputType="textCapCharacters"
+                android:text="@string/ed_kecamatan"
+                android:textColor="@color/grey"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/container_edKecamatan"
+                app:layout_constraintEnd_toEndOf="@+id/container_edKecamatan"
+                app:layout_constraintStart_toStartOf="@+id/container_edKecamatan"
+                app:layout_constraintTop_toTopOf="@+id/container_edKecamatan" />
+
+            <!-- View for Kelurahan -->
+            <TextView
+                android:id="@+id/tv_kelurahan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="33dp"
+                android:layout_marginTop="17dp"
+                android:fontFamily="@font/manrope_regular"
+                android:text="@string/tv_kelurahan"
+                android:textColor="@color/dim_grey"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/container_edKecamatan" />
+
+            <ImageView
+                android:id="@+id/container_edKelurahan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="33dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginEnd="33dp"
+                android:background="@drawable/ic_edit_text_bar"
+                android:contentDescription="@string/container_editText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_kelurahan" />
+
+            <EditText
+                android:id="@+id/ed_kelurahan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/manrope_regular"
+                android:hint="@string/ed_kelurahan"
+                android:importantForAutofill="no"
+                android:inputType="textCapCharacters"
+                android:text="@string/ed_kelurahan"
+                android:textColor="@color/grey"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/container_edKelurahan"
+                app:layout_constraintEnd_toEndOf="@+id/container_edKelurahan"
+                app:layout_constraintStart_toStartOf="@+id/container_edKelurahan"
+                app:layout_constraintTop_toTopOf="@+id/container_edKelurahan" />
+
+            <!-- View for Kelurahan -->
+            <TextView
+                android:id="@+id/tv_alamat"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="33dp"
+                android:layout_marginTop="17dp"
+                android:fontFamily="@font/manrope_regular"
+                android:text="@string/tv_alamat"
+                android:textColor="@color/dim_grey"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/container_edKelurahan" />
+
+            <ImageView
+                android:id="@+id/container_edAlamat"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="33dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginEnd="33dp"
+                android:background="@drawable/ic_edit_text_bar"
+                android:contentDescription="@string/container_editText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_alamat" />
+
+            <EditText
+                android:id="@+id/ed_alamat"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/manrope_regular"
+                android:hint="@string/ed_alamat"
+                android:importantForAutofill="no"
+                android:inputType="textCapCharacters"
+                android:text="@string/ed_alamat"
+                android:textColor="@color/grey"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/container_edAlamat"
+                app:layout_constraintEnd_toEndOf="@+id/container_edAlamat"
+                app:layout_constraintStart_toStartOf="@+id/container_edAlamat"
+                app:layout_constraintTop_toTopOf="@+id/container_edAlamat" />
+
+            <!-- View for Pekerjaan -->
+            <TextView
+                android:id="@+id/tv_pekerjaan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="33dp"
+                android:layout_marginTop="17dp"
+                android:fontFamily="@font/manrope_regular"
+                android:text="@string/tv_pekerjaan"
+                android:textColor="@color/dim_grey"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/container_edAlamat" />
+
+            <ImageView
+                android:id="@+id/container_edPekerjaan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="33dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginEnd="33dp"
+                android:background="@drawable/ic_edit_text_bar"
+                android:contentDescription="@string/container_editText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_pekerjaan" />
+
+            <EditText
+                android:id="@+id/ed_pekerjaan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/manrope_regular"
+                android:hint="@string/ed_pekerjaan"
+                android:importantForAutofill="no"
+                android:inputType="textCapCharacters"
+                android:text="@string/ed_pekerjaan"
+                android:textColor="@color/grey"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/container_edPekerjaan"
+                app:layout_constraintEnd_toEndOf="@+id/container_edPekerjaan"
+                app:layout_constraintStart_toStartOf="@+id/container_edPekerjaan"
+                app:layout_constraintTop_toTopOf="@+id/container_edPekerjaan" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/bt_lanjut"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:layout_marginEnd="33dp"
+        android:layout_marginBottom="36dp"
+        android:fontFamily="@font/manrope_medium"
+        android:letterSpacing="0.0"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:text="@string/bt_simpan"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_daftar_line_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/ic_line_unfilled"
+        android:contentDescription="@string/line_defines_screen"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_daftar_line_two"
+        app:layout_constraintEnd_toStartOf="@+id/iv_daftar_line_two"
+        app:layout_constraintTop_toTopOf="@+id/iv_daftar_line_two" />
+
+    <ImageView
+        android:id="@+id/iv_daftar_line_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/ic_line_unfilled"
+        android:contentDescription="@string/line_defines_screen"
+        app:layout_constraintBottom_toTopOf="@+id/bt_lanjut"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_daftar_line_three"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/ic_line_filled"
+        android:contentDescription="@string/line_defines_screen"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_daftar_line_two"
+        app:layout_constraintStart_toEndOf="@+id/iv_daftar_line_two"
+        app:layout_constraintTop_toTopOf="@+id/iv_daftar_line_two" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -12,7 +12,7 @@ import com.floadsbjm.driver.network.BaseRepository
 abstract class BaseFragment<VM : ViewModel, B : ViewBinding, R : BaseRepository> : Fragment() {
 
     private var _binding: B? = null
-    protected val binding get() = _binding!!
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater,
