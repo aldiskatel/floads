@@ -1,4 +1,4 @@
-package com.floadsbjm.driver.ui.auth
+package com.floadsbjm.driver.viewmodels
 
 import androidx.lifecycle.ViewModel
 

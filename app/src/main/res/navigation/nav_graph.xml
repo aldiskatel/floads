@@ -3,13 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/loginFragment">
+    app:startDestination="@id/dashboardFragment">
 
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.floadsbjm.driver.ui.LoginFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" >
+        tools:layout="@layout/fragment_login">
         <action
             android:id="@+id/action_loginFragment_to_fragmentRegistrationOne"
             app:destination="@id/fragmentRegistrationOne" />
@@ -18,7 +18,7 @@
         android:id="@+id/fragmentRegistrationOne"
         android:name="com.floadsbjm.driver.ui.FragmentRegistrationOne"
         android:label="fragment_registration_one"
-        tools:layout="@layout/fragment_registration_one" >
+        tools:layout="@layout/fragment_registration_one">
         <action
             android:id="@+id/action_fragmentRegistrationOne_to_fragmentRegistrationTwo"
             app:destination="@id/fragmentRegistrationTwo" />
@@ -27,7 +27,7 @@
         android:id="@+id/fragmentRegistrationTwo"
         android:name="com.floadsbjm.driver.ui.FragmentRegistrationTwo"
         android:label="fragment_registration_two"
-        tools:layout="@layout/fragment_registration_two" >
+        tools:layout="@layout/fragment_registration_two">
         <action
             android:id="@+id/action_fragmentRegistrationTwo_to_fragmentRegistrationThree"
             app:destination="@id/fragmentRegistrationThree" />
@@ -37,4 +37,9 @@
         android:name="com.floadsbjm.driver.ui.FragmentRegistrationThree"
         android:label="fragment_registration_three"
         tools:layout="@layout/fragment_registration_three" />
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.floadsbjm.driver.ui.DashboardFragment"
+        android:label="fragment_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
 </navigation>

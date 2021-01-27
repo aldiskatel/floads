@@ -1,12 +1,10 @@
 package com.floadsbjm.driver.ui
 
-import android.os.Bundle
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import com.floadsbjm.driver.databinding.FragmentLoginBinding
 import com.floadsbjm.driver.network.AuthRepository
-import com.floadsbjm.driver.ui.auth.AuthViewModel
+import com.floadsbjm.driver.viewmodels.AuthViewModel
 import com.floadsbjm.driver.ui.base.BaseFragment
 
 class  LoginFragment : BaseFragment<AuthViewModel, FragmentLoginBinding, AuthRepository>() {

@@ -42,4 +42,6 @@
     <string name="ed_alamat">Cth. Jalan-Komp...</string>
     <string name="tv_pekerjaan">Pekerjaan</string>
     <string name="ed_pekerjaan">Cth. Ojek Online</string>
+    <string name="bt_navDrawer_description">Burger Bar to open Nav Drawer</string>
+    <string name="tv_status">Offline</string>
 </resources>
