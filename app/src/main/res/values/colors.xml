@@ -10,6 +10,7 @@
     <color name="dim_grey">#6C6C6C</color>
     <color name="grey">#AFACAC</color>
     <color name="grey_2">#9C9B9B</color>
+    <color name="grey_3">#DADADA</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 </resources>

@@ -30,6 +30,7 @@ class DashboardFragment : Fragment() {
         _binding = FragmentDashboardBinding.inflate(inflater, container, false)
         binding.mapView.onCreate(savedInstanceState)
 
+        // @TODO: Change this according to app's logic
         binding.mapView.getMapAsync {
             it.addMarker(
                 MarkerOptions()

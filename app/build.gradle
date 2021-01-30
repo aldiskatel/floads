@@ -70,4 +70,6 @@ dependencies {
     implementation 'com.github.bumptech.glide:glide:4.11.0'
     kapt 'com.github.bumptech.glide:compiler:4.11.0'
 
+    // Single Row Horizontally Scrollable Calendar
+    implementation 'com.michalsvec:single-row-calednar:1.0.0'
 }
