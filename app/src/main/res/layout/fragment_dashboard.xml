@@ -41,4 +41,306 @@
         app:layout_constraintTop_toTopOf="@+id/tv_status"
         app:track="@drawable/ic_toogle_track" />
 
+    <!-- View for Collapsible Status View
+         @offline: @string/tv_status_offline, @string/tv_askingForOnline, IV_visibility True
+         @online: @string/tv_more_routes, IV_visibility False
+         @JobDone: Collapse all views
+    -->
+    <ImageView
+        android:id="@+id/container_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/ic_container_rectangle"
+        android:contentDescription="@string/dashboard_status_container"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_status" />
+
+    <ImageView
+        android:id="@+id/ic_moon_offline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:background="@drawable/ic_oflline_moon"
+        android:contentDescription="@string/ic_moon_offline"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/container_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/container_view" />
+
+    <TextView
+        android:id="@+id/tv_offline_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/manrope_bold"
+        android:text="@string/tv_offline_state"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@id/ic_moon_offline"
+        app:layout_constraintTop_toTopOf="@id/container_view" />
+
+    <TextView
+        android:id="@+id/tv_askingForOnline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/manrope_regular"
+        android:text="@string/tv_askingForOnline"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="@id/tv_offline_state"
+        app:layout_constraintTop_toBottomOf="@id/tv_offline_state" />
+
+    <TextView
+        android:id="@+id/tv_more_routes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="9dp"
+        android:fontFamily="@font/manrope_regular"
+        android:text="@string/tv_more_routes"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@id/container_view"
+        app:layout_constraintTop_toTopOf="@id/container_view" />
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/container_view" />
+
+    <!-- View for Get Current Location Marker -->
+    <ImageButton
+        android:id="@+id/container_get_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="21dp"
+        android:background="@drawable/container_get_location"
+        android:contentDescription="@string/dashboard_get_location"
+        app:layout_constraintBottom_toTopOf="@id/container_bottom_sheet"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/ic_get_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_get_location"
+        android:contentDescription="@string/dashboard_get_location"
+        app:layout_constraintBottom_toBottomOf="@+id/container_get_location"
+        app:layout_constraintEnd_toEndOf="@+id/container_get_location"
+        app:layout_constraintStart_toStartOf="@+id/container_get_location"
+        app:layout_constraintTop_toTopOf="@+id/container_get_location" />
+
+    <!-- View for Bottom Sheet -->
+    <ImageView
+        android:id="@+id/container_bottom_sheet_shadow"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/bottom_sheet_shadow"
+        android:contentDescription="@string/bottom_sheet_shadow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/container_bottom_sheet"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/container_bottom_sheet"
+        android:contentDescription="@string/bottom_sheet"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/dashboard_profile_image"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="@dimen/dimen13dp"
+        android:layout_marginTop="@dimen/dimen33dp"
+        android:contentDescription="@string/bottom_sheet_profile_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/container_bottom_sheet"
+        tools:background="@color/grey" />
+
+    <TextView
+        android:id="@+id/tv_driver_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="39dp"
+        android:fontFamily="@font/manrope_bold"
+        android:text="@string/tv_driver_name"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@+id/dashboard_profile_image"
+        app:layout_constraintTop_toTopOf="@+id/container_bottom_sheet" />
+
+    <TextView
+        android:id="@+id/tv_driver_level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/manrope_bold"
+        android:text="@string/tv_driver_level"
+        android:textColor="@color/grey_2"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_driver_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_driver_name" />
+
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen33dp"
+        android:layout_marginEnd="12dp"
+        android:fontFamily="@font/manrope_bold"
+        android:text="@string/tv_price"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/container_bottom_sheet" />
+
+    <TextView
+        android:id="@+id/tv_price_basis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/manrope_bold"
+        android:text="@string/tv_price_basis"
+        android:textColor="@color/grey_2"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_price"
+        app:layout_constraintTop_toBottomOf="@+id/tv_price" />
+
+    <ImageView
+        android:id="@+id/container_inside_bottom_sheet"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/ic_rectangle_bottom_sheet"
+        android:contentDescription="@string/container_inside_bottom_sheet"
+        app:layout_constraintBottom_toBottomOf="@+id/mapView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_total_distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ic_total_distance"
+        android:contentDescription="@string/iv_total_distance"
+        app:layout_constraintStart_toStartOf="@id/container_inside_bottom_sheet"
+        app:layout_constraintTop_toTopOf="@id/container_inside_bottom_sheet" />
+
+    <TextView
+        android:id="@+id/tv_total_distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/manrope_bold"
+        android:text="@string/tv_total_distance"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/iv_total_distance"
+        app:layout_constraintStart_toStartOf="@+id/iv_total_distance"
+        app:layout_constraintTop_toBottomOf="@+id/iv_total_distance" />
+
+    <TextView
+        android:id="@+id/tv_desc_total_distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/manrope_regular"
+        android:text="@string/tv_desc_total_distance"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_total_distance"
+        app:layout_constraintStart_toStartOf="@+id/tv_total_distance"
+        app:layout_constraintTop_toBottomOf="@+id/tv_total_distance" />
+
+    <ImageView
+        android:id="@+id/iv_distance_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ic_distance_left"
+        android:contentDescription="@string/iv_distance_left"
+        app:layout_constraintEnd_toStartOf="@+id/iv_days_left"
+        app:layout_constraintStart_toEndOf="@+id/iv_total_distance"
+        app:layout_constraintTop_toTopOf="@+id/container_inside_bottom_sheet" />
+
+    <TextView
+        android:id="@+id/tv_distance_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/manrope_bold"
+        android:text="@string/tv_total_distance"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/iv_distance_left"
+        app:layout_constraintStart_toStartOf="@+id/iv_distance_left"
+        app:layout_constraintTop_toBottomOf="@+id/iv_distance_left" />
+
+
+    <TextView
+        android:id="@+id/tv_desc_distance_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/manrope_regular"
+        android:text="@string/tv_desc_distance_left"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_distance_left"
+        app:layout_constraintStart_toStartOf="@+id/tv_distance_left"
+        app:layout_constraintTop_toBottomOf="@+id/tv_distance_left" />
+
+    <ImageView
+        android:id="@+id/iv_days_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="51dp"
+        android:background="@drawable/ic_calendar"
+        android:contentDescription="@string/iv_days_left"
+        app:layout_constraintEnd_toEndOf="@id/container_inside_bottom_sheet"
+        app:layout_constraintTop_toTopOf="@id/container_inside_bottom_sheet" />
+
+    <TextView
+        android:id="@+id/tv_days_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/manrope_bold"
+        android:text="@string/tv_days_left"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/iv_days_left"
+        app:layout_constraintStart_toStartOf="@+id/iv_days_left"
+        app:layout_constraintTop_toBottomOf="@+id/iv_days_left" />
+
+    <TextView
+        android:id="@+id/tv_desc_task_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/manrope_regular"
+        android:text="@string/tv_desc_days_left"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_days_left"
+        app:layout_constraintStart_toStartOf="@+id/tv_days_left"
+        app:layout_constraintTop_toBottomOf="@+id/tv_days_left" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
