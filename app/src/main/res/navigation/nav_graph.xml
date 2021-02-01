@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/phoneNumberVerificationFragment">
+    app:startDestination="@id/dashboardFragment">
 
     <fragment
         android:id="@+id/loginFragment"
@@ -39,7 +39,7 @@
         tools:layout="@layout/fragment_registration_three" />
     <fragment
         android:id="@+id/dashboardFragment"
-        android:name="com.floadsbjm.driver.ui.DashboardFragment"
+        android:name="com.floadsbjm.driver.ui.dashboard.DashboardFragment"
         android:label="fragment_dashboard"
         tools:layout="@layout/fragment_dashboard" />
     <fragment
@@ -47,4 +47,9 @@
         android:name="com.floadsbjm.driver.ui.PhoneNumberVerificationFragment"
         android:label="fragment_phone_number_verif"
         tools:layout="@layout/fragment_phone_number_verif" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.floadsbjm.driver.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
 </navigation>

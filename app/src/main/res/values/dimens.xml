@@ -3,4 +3,5 @@
     <dimen name="margin16dp">16dp</dimen>
     <dimen name="dimen13dp">13dp</dimen>
     <dimen name="dimen33dp">33dp</dimen>
+    <dimen name="max_drawer_width">300dp</dimen>
 </resources>

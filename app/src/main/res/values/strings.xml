@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Floads-Driver</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <!-- Labels for Text View -->
     <string name="tv_masuk">Masuk</string>
@@ -35,9 +34,14 @@
     <string name="tv_desc_days_left">Sisa hari</string>
     <string name="tv_desc_verifikasi_no_telepon">Verifikasi Nomor Telepon</string>
     <string name="tv_desc_verification_sent">Masukkan kode verifikasi telah dikirimkan\nvia SMS ke nomor kamu di %s</string>
+    <string name="tv_resend_otp">Kirim ulang OTP</string>
+    <string name="tv_otp_timer">(0:00)</string>
+    <string name="tv_edit">Edit</string>
+    <string name="tv_container_information">INFORMASI</string>
+    <string name="tv_username_label">Username</string>
 
-    <!-- contentDescription strings for Image View-->
-    <string name="iv_arrow">Arrow Back Button</string>
+    <!-- contentDescription strings for Image View and others -->
+    <string name="iv_arrow">Arrow Action</string>
     <string name="iv_total_distance">Total Distance for today</string>
     <string name="tv_total_distance">5 km</string>
     <string name="tv_desc_total_distance">Jarak hari ini</string>
@@ -55,15 +59,17 @@
     <string name="ic_moon_offline">Indicating offline state</string>
     <string name="bottom_sheet_shadow">Bottom Sheet Drop Shadow</string>
     <string name="bottom_sheet">Dashboard Bottom Sheet</string>
+    <string name="iv_profile">Profile Picture</string>
+    <string name="iv_details_arrow">Click to edit</string>
+    <string name="container_editText">Container for Edit Text</string>
+    <string name="countryCodeTelp">Kode Negara Nomor Telepon</string>
 
     <!-- Other Strings -->
     <string name="hint_password">*******************</string>
     <string name="bt_masuk">Masuk</string>
     <string name="bt_facebook">Masuk dengan Facebook</string>
     <string name="bt_lanjut">Lanjut</string>
-    <string name="container_editText">Container for Edit Text</string>
     <string name="ed_nomorKTP">63xxxxxxxxxxxxxx</string>
-    <string name="countryCodeTelp">Kode Negara Nomor Telepon</string>
     <string name="idCountryCode">+62</string>
     <string name="ed_nomorTelepon">812-xxxx-xxxx</string>
     <string name="radio_male">Laki-laki</string>
@@ -74,12 +80,12 @@
     <string name="ed_kelurahan">Cth. Basirih</string>
     <string name="ed_alamat">Cth. Jalan-Komp…</string>
     <string name="ed_pekerjaan">Cth. Ojek Online</string>
-    <string name="ed_otp">7</string>
-    <string name="tv_resend_otp">Kirim ulang OTP</string>
-    <string name="tv_otp_timer">(0:00)</string>
-    <string name="tv_edit">Edit</string>
-    <string name="iv_profile">Profile Picture on Profile Page</string>
-    <string name="tv_container_information">INFORMASI</string>
-    <string name="tv_username_label">Username</string>
-    <string name="iv_details_arrow">Click to edit</string>
+
+    <!-- Navigation Drawer's String-->
+    <string name="nav_home">Home</string>
+    <string name="profile_bar">Bar indicating profile</string>
+    <string name="nav_wallet">Dompet Ku</string>
+    <string name="nav_history">History</string>
+    <string name="nav_setting">Pengaturan</string>
+    <string name="nav_logout">Logout</string>
 </resources>
