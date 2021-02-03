@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".EditVehicleFragment">
+
+        <ImageView
+            android:id="@+id/iv_arrow_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin24dp"
+            android:layout_marginTop="@dimen/margin24dp"
+            android:background="@drawable/ic_arrow"
+            android:contentDescription="@string/iv_arrow"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_brand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin16dp"
+            android:layout_marginTop="@dimen/margin16dp"
+            android:fontFamily="@font/manrope_regular"
+            android:text="@string/tv_brand_label"
+            android:textColor="@color/dim_grey"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_arrow_back" />
+
+        <ImageView
+            android:id="@+id/tv_brand_container"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="@dimen/margin16dp"
+            android:background="@drawable/ic_rectangle_bar"
+            android:backgroundTint="@color/white"
+            android:contentDescription="@string/tv_brand"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_brand" />
+
+        <EditText
+            android:id="@+id/ed_brand"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/manrope_bold"
+            android:hint="@string/tv_brand"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:textColor="@color/dim_grey"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_brand_container"
+            app:layout_constraintEnd_toEndOf="@+id/tv_brand_container"
+            app:layout_constraintStart_toStartOf="@+id/tv_brand_container"
+            app:layout_constraintTop_toTopOf="@+id/tv_brand_container" />
+
+        <TextView
+            android:id="@+id/tv_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin16dp"
+            android:layout_marginTop="@dimen/margin16dp"
+            android:fontFamily="@font/manrope_regular"
+            android:text="@string/tv_year"
+            android:textColor="@color/dim_grey"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_brand_container" />
+
+        <ImageView
+            android:id="@+id/tv_year_container"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="@dimen/margin16dp"
+            android:background="@drawable/ic_rectangle_bar"
+            android:backgroundTint="@color/white"
+            android:contentDescription="@string/year"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_year" />
+
+        <EditText
+            android:id="@+id/ed_year"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/manrope_bold"
+            android:hint="@string/ed_year"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="date"
+            android:textColor="@color/dim_grey"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_year_container"
+            app:layout_constraintEnd_toEndOf="@+id/tv_year_container"
+            app:layout_constraintStart_toStartOf="@+id/tv_year_container"
+            app:layout_constraintTop_toTopOf="@+id/tv_year_container" />
+
+        <!-- TODO: For Year's component, it could be a picker -->
+
+        <TextView
+            android:id="@+id/tv_police_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin16dp"
+            android:layout_marginTop="@dimen/margin16dp"
+            android:fontFamily="@font/manrope_regular"
+            android:text="@string/tv_police_number_label"
+            android:textColor="@color/dim_grey"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_year_container" />
+
+        <ImageView
+            android:id="@+id/tv_police_number_container"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="@dimen/margin16dp"
+            android:background="@drawable/ic_rectangle_bar"
+            android:backgroundTint="@color/white"
+            android:contentDescription="@string/tv_police_number_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_police_number" />
+
+        <EditText
+            android:id="@+id/ed_police_number"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/manrope_bold"
+            android:hint="@string/tv_police_number"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="numberSigned"
+            android:textColor="@color/dim_grey"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_police_number_container"
+            app:layout_constraintEnd_toEndOf="@+id/tv_police_number_container"
+            app:layout_constraintStart_toStartOf="@+id/tv_police_number_container"
+            app:layout_constraintTop_toTopOf="@+id/tv_police_number_container" />
+
+        <TextView
+            android:id="@+id/tv_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin16dp"
+            android:layout_marginTop="@dimen/margin16dp"
+            android:fontFamily="@font/manrope_regular"
+            android:text="@string/tv_color_label"
+            android:textColor="@color/dim_grey"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_police_number_container" />
+
+        <ImageView
+            android:id="@+id/tv_color_container"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="@dimen/margin16dp"
+            android:background="@drawable/ic_rectangle_bar"
+            android:backgroundTint="@color/white"
+            android:contentDescription="@string/tv_color_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_color" />
+
+        <EditText
+            android:id="@+id/ed_color"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/manrope_bold"
+            android:hint="@string/tv_color"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:textColor="@color/dim_grey"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_color_container"
+            app:layout_constraintEnd_toEndOf="@+id/tv_color_container"
+            app:layout_constraintStart_toStartOf="@+id/tv_color_container"
+            app:layout_constraintTop_toTopOf="@+id/tv_color_container" />
+
+        <ImageView
+            android:id="@+id/iv_line_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen40dp"
+            android:layout_marginEnd="@dimen/dimen10dp"
+            android:layout_marginBottom="@dimen/dimen33dp"
+            android:background="@drawable/ic_line_filled"
+            android:contentDescription="@string/line_defines_screen"
+            app:layout_constraintEnd_toStartOf="@+id/iv_line_two"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_color_container" />
+
+        <ImageView
+            android:id="@+id/iv_line_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen40dp"
+            android:layout_marginBottom="@dimen/dimen33dp"
+            android:background="@drawable/ic_line_unfilled"
+            android:contentDescription="@string/line_defines_screen"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_line_one"
+            app:layout_constraintTop_toBottomOf="@id/tv_color_container" />
+
+        <Button
+            android:id="@+id/bt_next"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen33dp"
+            android:layout_marginTop="@dimen/margin24dp"
+            android:layout_marginEnd="@dimen/dimen33dp"
+            android:backgroundTint="@color/dim_grey"
+            android:fontFamily="@font/manrope_regular"
+            android:letterSpacing="0"
+            android:text="@string/bt_lanjut"
+            android:textAllCaps="false"
+            android:textSize="@dimen/font24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_line_one" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+

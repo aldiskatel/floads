@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/profileFragment">
+    app:startDestination="@id/splashScreenFragment">
 
     <fragment
         android:id="@+id/loginFragment"
@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_loginFragment_to_fragmentRegistrationOne"
             app:destination="@id/fragmentRegistrationOne" />
+        <action
+            android:id="@+id/action_loginFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
     </fragment>
     <fragment
         android:id="@+id/fragmentRegistrationOne"
@@ -22,6 +25,9 @@
         <action
             android:id="@+id/action_fragmentRegistrationOne_to_fragmentRegistrationTwo"
             app:destination="@id/fragmentRegistrationTwo" />
+        <action
+            android:id="@+id/action_fragmentRegistrationOne_to_loginFragment"
+            app:destination="@id/loginFragment" />
     </fragment>
     <fragment
         android:id="@+id/fragmentRegistrationTwo"
@@ -51,7 +57,14 @@
         android:id="@+id/profileFragment"
         android:name="com.floadsbjm.floader.ui.ProfileFragment"
         android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" />
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profileFragment_to_editProfileFragment"
+            app:destination="@id/editProfileFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_editVehicleFragment"
+            app:destination="@id/editVehicleFragment" />
+    </fragment>
     <fragment
         android:id="@+id/editProfileFragment"
         android:name="com.floadsbjm.floader.ui.EditProfileFragment"
@@ -67,4 +80,23 @@
         android:name="com.floadsbjm.floader.ui.ProfileVehicleFragment"
         android:label="fragment_profile_vehicle"
         tools:layout="@layout/fragment_profile_vehicle" />
+    <fragment
+        android:id="@+id/editVehicleFragment"
+        android:name="com.floadsbjm.floader.EditVehicleFragment"
+        android:label="fragment_edit_vehicle"
+        tools:layout="@layout/fragment_edit_vehicle" />
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.floadsbjm.floader.ui.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" />
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="com.floadsbjm.floader.SplashScreenFragment"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen">
+        <action
+            android:id="@+id/action_splashScreenFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
 </navigation>

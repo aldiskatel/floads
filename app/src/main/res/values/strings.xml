@@ -52,7 +52,7 @@
     <string name="iv_days_left">Days before expiring</string>
     <string name="hint_email">Cth. nama@email.com</string>
     <string name="ic_email">email</string>
-    <string name="line_defines_screen">Line that defines which screen in Registration</string>
+    <string name="line_defines_screen">Line that defines which screen currently</string>
     <string name="facebook_login">Facebook Logo</string>
     <string name="dashboard_get_location">Button for getting current location</string>
     <string name="bottom_sheet_profile_image">Driver Profile Image</string>
@@ -111,4 +111,10 @@
     <string name="tv_color">Hitam</string>
     <string name="tv_driving_license_label">Kartu SIM</string>
     <string name="tv_ktp_label">Kartu KTP/Pelajar</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="year">Fill it with current year</string>
+    <string name="ed_year">2020</string>
+    <string name="tv_year">Tahun</string>
+    <string name="splash_screen">Splash Screen</string>
 </resources>

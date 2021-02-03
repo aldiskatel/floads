@@ -30,9 +30,20 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        drawerLayout = binding.drawerLayout
+
         val navHostFragment =
             supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         val navController = navHostFragment.navController
+
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+            when (destination.id) {
+                R.id.dashboardFragment,
+                R.id.profileFragment,
+                R.id.historyFragment -> setDrawerLocked(false)
+                else -> setDrawerLocked(true)
+            }
+        }
 
         initRecyclerView()
         updateAdapter()
@@ -63,4 +74,14 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+
+
+    private fun setDrawerLocked(enabled: Boolean) {
+        if (enabled) {
+            drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED)
+        } else {
+            drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED)
+        }
+    }
+
 }

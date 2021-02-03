@@ -12,4 +12,5 @@
     <dimen name="margin8dp">8dp</dimen>
     <dimen name="dimenHalf" type="dimen">2dp</dimen>
     <dimen name="margin24dp">24dp</dimen>
+    <dimen name="margin100dp">100dp</dimen>
 </resources>
