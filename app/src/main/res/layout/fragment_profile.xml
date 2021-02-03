@@ -4,16 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProfileFragment">
+    tools:context=".ui.ProfileFragment">
+
+    <ImageView
+        android:id="@+id/profile_header_shadow"
+        android:layout_width="0dp"
+        android:layout_height="315dp"
+        android:background="@drawable/bottom_sheet_shadow"
+        android:contentDescription="@null"
+        android:rotation="180"
+        app:layout_constraintBottom_toTopOf="@id/container_profile_information"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         android:id="@+id/iv_arrow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="29dp"
-        android:layout_marginTop="40dp"
-        android:background="@drawable/ic_arrow"
-        android:contentDescription="@string/iv_arrow"
+        android:layout_marginStart="@dimen/margin16dp"
+        android:layout_marginTop="@dimen/dimen40dp"
+        android:background="@drawable/ic_burger_bar"
+        android:contentDescription="@null"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -22,15 +34,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:layout_marginEnd="@dimen/dimen33dp"
+        android:layout_marginEnd="@dimen/margin16dp"
         android:fontFamily="@font/manrope_bold"
         android:text="@string/tv_edit"
-        android:textColor="@color/grey_2"
+        android:textColor="@color/black"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/iv_profile"
         android:layout_width="114dp"
         android:layout_height="114dp"
@@ -39,7 +51,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_edit"
-        tools:background="@color/grey" />
+        tools:src="@color/grey" />
 
     <TextView
         android:id="@+id/tv_profile_name"
@@ -77,66 +89,48 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_driver_level" />
 
-    <TextView
-        android:id="@+id/tv_container_information"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/dimen13dp"
-        android:layout_marginTop="9dp"
-        android:fontFamily="@font/manrope_medium"
-        android:text="@string/tv_container_information"
-        android:textColor="#938C8C"
-        android:textSize="15sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/container_profile_information" />
-
-    <View
-        android:id="@+id/container_inside_information"
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/profile_tab_layout"
+        app:tabTextAppearance="@style/TabLayoutTextStyle"
+        android:layout_marginTop="@dimen/margin8dp"
+        android:background="#DADADA"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="38dp"
-        android:layout_marginBottom="57dp"
-        android:background="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/container_profile_information" />
+        app:layout_constraintTop_toTopOf="@id/container_profile_information" />
 
-    <TextView
-        android:id="@+id/tv_username_label"
-        android:layout_width="wrap_content"
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/profile_view_pager"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/dimen13dp"
-        android:layout_marginTop="29dp"
-        android:fontFamily="@font/manrope_bold"
-        android:text="@string/tv_username_label"
-        android:textColor="@color/black"
-        android:textSize="15sp"
-        app:layout_constraintStart_toStartOf="@id/container_inside_information"
-        app:layout_constraintTop_toTopOf="@+id/container_inside_information" />
-
-    <TextView
-        android:id="@+id/tv_username"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="29dp"
-        android:layout_marginEnd="11dp"
-        android:fontFamily="@font/manrope_bold"
-        android:text="@string/tv_driver_name"
-        android:textColor="@color/grey_2"
-        android:textSize="15sp"
-        app:layout_constraintEnd_toStartOf="@+id/iv_arrow_edit"
-        app:layout_constraintTop_toTopOf="@+id/container_inside_information" />
+        android:elevation="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile_tab_layout" />
 
     <ImageView
-        android:id="@+id/iv_arrow_edit"
+        android:id="@+id/iv_line_one"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="29dp"
-        android:layout_marginEnd="6dp"
-        android:background="@drawable/ic_arrow_right"
-        android:contentDescription="@string/iv_details_arrow"
-        app:layout_constraintEnd_toEndOf="@id/container_inside_information"
-        app:layout_constraintTop_toTopOf="@+id/container_inside_information" />
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="@dimen/dimen33dp"
+        android:background="@drawable/ic_line_filled"
+        android:contentDescription="@string/line_defines_screen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/iv_line_two"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_line_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimen33dp"
+        android:background="@drawable/ic_line_unfilled"
+        android:contentDescription="@string/line_defines_screen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_line_one" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -72,4 +72,7 @@ dependencies {
 
     // Single Row Horizontally Scrollable Calendar
     implementation 'com.michalsvec:single-row-calednar:1.0.0'
+
+    // Circular Image View
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
 }

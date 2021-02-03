@@ -39,6 +39,9 @@
     <string name="tv_edit">Edit</string>
     <string name="tv_container_information">INFORMASI</string>
     <string name="tv_username_label">Username</string>
+    <string name="tv_repeat_password">Ulangi Password</string>
+    <string name="tv_phone_number">Phone Number</string>
+    <string name="tv_edit_photo">Edit Foto</string>
 
     <!-- contentDescription strings for Image View and others -->
     <string name="iv_arrow">Arrow Action</string>
@@ -47,7 +50,7 @@
     <string name="tv_desc_total_distance">Jarak hari ini</string>
     <string name="iv_distance_left">Distance to go for today</string>
     <string name="iv_days_left">Days before expiring</string>
-    <string name="hint_email">cth.nama@email.com</string>
+    <string name="hint_email">Cth. nama@email.com</string>
     <string name="ic_email">email</string>
     <string name="line_defines_screen">Line that defines which screen in Registration</string>
     <string name="facebook_login">Facebook Logo</string>
@@ -63,6 +66,14 @@
     <string name="iv_details_arrow">Click to edit</string>
     <string name="container_editText">Container for Edit Text</string>
     <string name="countryCodeTelp">Kode Negara Nomor Telepon</string>
+
+    <!-- Navigation Drawer's String-->
+    <string name="nav_home">Home</string>
+    <string name="profile_bar">Bar indicating profile</string>
+    <string name="nav_wallet">Dompet Ku</string>
+    <string name="nav_history">History</string>
+    <string name="nav_setting">Pengaturan</string>
+    <string name="nav_logout">Logout</string>
 
     <!-- Other Strings -->
     <string name="hint_password">*******************</string>
@@ -80,12 +91,24 @@
     <string name="ed_kelurahan">Cth. Basirih</string>
     <string name="ed_alamat">Cth. Jalan-Komp…</string>
     <string name="ed_pekerjaan">Cth. Ojek Online</string>
-
-    <!-- Navigation Drawer's String-->
-    <string name="nav_home">Home</string>
-    <string name="profile_bar">Bar indicating profile</string>
-    <string name="nav_wallet">Dompet Ku</string>
-    <string name="nav_history">History</string>
-    <string name="nav_setting">Pengaturan</string>
-    <string name="nav_logout">Logout</string>
+    <string name="profile_edit_photo">Camera Icon</string>
+    <string name="ed_first_name">First Name</string>
+    <string name="ed_last_name">Last Name</string>
+    <string name="ed_username_container">Edit Text Box</string>
+    <string name="ed_username">Cth. Jeremiah</string>
+    <string name="ed_profile_phone_number">Cth. +62–8123*******</string>
+    <string name="ed_phone_number_container">Edit Text for Phone Number</string>
+    <string name="ed_password">Edit Text for Password</string>
+    <string name="ic_password">Show or Hide Password</string>
+    <string name="bt_cancel">Cancel</string>
+    <string name="phone_number">+62 822–1234–5678</string>
+    <string name="email">yourname@email.com</string>
+    <string name="tv_brand_label">Merk</string>
+    <string name="tv_brand">NMAX 550 CC</string>
+    <string name="tv_police_number_label">Plat Nomor</string>
+    <string name="tv_police_number">DA 1234 BBU</string>
+    <string name="tv_color_label">Warna</string>
+    <string name="tv_color">Hitam</string>
+    <string name="tv_driving_license_label">Kartu SIM</string>
+    <string name="tv_ktp_label">Kartu KTP/Pelajar</string>
 </resources>
