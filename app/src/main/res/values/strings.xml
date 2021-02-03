@@ -117,4 +117,9 @@
     <string name="ed_year">2020</string>
     <string name="tv_year">Tahun</string>
     <string name="splash_screen">Splash Screen</string>
+    <string name="tv_resend_link_desc">Belum menerima link reset password?</string>
+    <string name="tv_resend_link">Kirim Ulang</string>
+    <string name="tv_send">Kirim</string>
+    <string name="tv_new_password">Password Baru</string>
+    <string name="tv_new_password_repeat">Ulangi Password Baru</string>
 </resources>

@@ -13,4 +13,11 @@
     <dimen name="dimenHalf" type="dimen">2dp</dimen>
     <dimen name="margin24dp">24dp</dimen>
     <dimen name="margin100dp">100dp</dimen>
+    <dimen name="margin29dp">29dp</dimen>
+    <dimen name="text32sp">32sp</dimen>
+    <dimen name="margin20dp">20dp</dimen>
+    <dimen name="text12sp">12sp</dimen>
+    <dimen name="margin7dp">7dp</dimen>
+    <dimen name="margin67dp">67dp</dimen>
+    <dimen name="text24sp">24sp</dimen>
 </resources>

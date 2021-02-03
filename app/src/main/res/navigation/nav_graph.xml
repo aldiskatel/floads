@@ -92,11 +92,21 @@
         tools:layout="@layout/fragment_history" />
     <fragment
         android:id="@+id/splashScreenFragment"
-        android:name="com.floadsbjm.floader.SplashScreenFragment"
+        android:name="com.floadsbjm.floader.ui.SplashScreenFragment"
         android:label="fragment_splash_screen"
         tools:layout="@layout/fragment_splash_screen">
         <action
             android:id="@+id/action_splashScreenFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/resetPasswordOneFragment"
+        android:name="com.floadsbjm.floader.ResetPasswordOneFragment"
+        android:label="fragment_reset_password_one"
+        tools:layout="@layout/fragment_reset_password_one" />
+    <fragment
+        android:id="@+id/resetPasswordTwoFragment"
+        android:name="com.floadsbjm.floader.ResetPasswordTwoFragment"
+        android:label="fragment_reset_password_two"
+        tools:layout="@layout/fragment_reset_password_two" />
 </navigation>

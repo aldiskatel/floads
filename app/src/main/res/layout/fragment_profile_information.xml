@@ -131,7 +131,7 @@
         app:layout_constraintTop_toBottomOf="@id/line_email" />
 
     <TextView
-        android:id="@+id/tv_driving_license"
+        android:id="@+id/tv_new_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/margin16dp"

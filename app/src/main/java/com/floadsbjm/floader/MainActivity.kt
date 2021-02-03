@@ -1,6 +1,10 @@
 package com.floadsbjm.floader
 
+import android.annotation.SuppressLint
+import android.graphics.Rect
 import android.os.Bundle
+import android.view.MotionEvent
+import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.fragment.NavHostFragment
@@ -8,8 +12,10 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.floadsbjm.floader.databinding.ActivityMainBinding
 import com.floadsbjm.floader.ui.dashboard.NavDrawerAdapter
 import com.floadsbjm.floader.ui.dashboard.NavigationDrawerItemModel
+import com.floadsbjm.floader.utils.hideKeyboard
 import com.floadsbjm.floader.utils.snackBar
 
+@SuppressLint("ClickableViewAccessibility")
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
@@ -84,4 +90,18 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    override fun dispatchTouchEvent(ev: MotionEvent?): Boolean {
+        if (ev?.action == MotionEvent.ACTION_DOWN) {
+            val v = currentFocus
+            if (v is EditText) {
+                val outRect = Rect()
+                v.getGlobalVisibleRect(outRect)
+                if (!outRect.contains(ev.rawX.toInt(), ev.rawY.toInt())) {
+                    v.clearFocus()
+                    v.hideKeyboard()
+                }
+            }
+        }
+        return super.dispatchTouchEvent(ev)
+    }
 }
