@@ -56,7 +56,7 @@ class DashboardFragment : Fragment() {
                     tvAskingForOnline.isVisible = false
                     icMoonOffline.isVisible = false
                     tvOfflineState.isVisible = false
-                    tvMoreRoutes.isVisible = true
+                    tvMoreRoutes.isVisible = tru
                 }
 
             } else {
