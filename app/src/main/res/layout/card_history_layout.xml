@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="@dimen/margin20dp"
+    app:cardCornerRadius="@dimen/dimen10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/card_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cloud">
+
+        <ImageView
+            android:id="@+id/profile_image"
+            android:layout_width="@dimen/dimen40dp"
+            android:layout_height="@dimen/dimen40dp"
+            android:layout_marginStart="@dimen/margin20dp"
+            android:layout_marginTop="@dimen/dimen13dp"
+            android:contentDescription="@string/iv_profile"
+            android:src="@drawable/history_card"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_profile_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen10dp"
+            android:fontFamily="@font/manrope_bold"
+            android:text="@string/tv_driver_name"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font16"
+            app:layout_constraintStart_toEndOf="@id/profile_image"
+            app:layout_constraintTop_toTopOf="@id/profile_image" />
+
+        <TextView
+            android:id="@+id/tv_driver_level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/manrope_regular"
+            android:text="@string/tv_driver_level"
+            android:textSize="@dimen/text12sp"
+            app:layout_constraintStart_toStartOf="@id/tv_profile_name"
+            app:layout_constraintTop_toBottomOf="@id/tv_profile_name" />
+
+        <TextView
+            android:id="@+id/tv_driver_wage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen13dp"
+            android:layout_marginEnd="@dimen/margin20dp"
+            android:fontFamily="@font/manrope_bold"
+            android:text="@string/tv_driver_wage"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_total_distance"
+            app:layout_constraintEnd_toEndOf="@id/tv_driver_wage"
+            app:layout_constraintTop_toBottomOf="@id/tv_driver_wage" />
+
+        <ImageView
+            android:id="@+id/card_body"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dimen180dp"
+            android:layout_marginTop="@dimen/dimen10dp"
+            android:background="@color/white"
+            android:contentDescription="@null"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profile_image" />
+
+        <TextView
+            android:id="@+id/start_working"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin20dp"
+            android:layout_marginTop="@dimen/dimen33dp"
+            android:fontFamily="@font/manrope_regular"
+            android:text="@string/start_working_label"
+            android:textSize="@dimen/text12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profile_image" />
+
+        <TextView
+            android:id="@+id/start_working_place"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin4dp"
+            android:fontFamily="@font/manrope_bold"
+            android:text="@string/start_working_place"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font16"
+            app:layout_constraintStart_toStartOf="@id/start_working"
+            app:layout_constraintTop_toBottomOf="@id/start_working" />
+
+        <View
+            android:id="@+id/line_1"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="@dimen/margin20dp"
+            android:layout_marginTop="@dimen/margin4dp"
+            android:layout_marginEnd="@dimen/margin20dp"
+            android:background="@color/grey"
+            app:layout_constraintEnd_toEndOf="@id/card_body"
+            app:layout_constraintStart_toStartOf="@id/card_body"
+            app:layout_constraintTop_toBottomOf="@id/start_working_place" />
+
+        <TextView
+            android:id="@+id/stop_working"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin20dp"
+            android:layout_marginTop="@dimen/margin20dp"
+            android:fontFamily="@font/manrope_regular"
+            android:text="@string/stop_working_label"
+            android:textSize="@dimen/text12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/line_1" />
+
+        <TextView
+            android:id="@+id/stop_working_place"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin4dp"
+            android:fontFamily="@font/manrope_bold"
+            android:text="@string/stop_working_place"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font16"
+            app:layout_constraintStart_toStartOf="@id/stop_working"
+            app:layout_constraintTop_toBottomOf="@id/stop_working" />
+
+        <View
+            android:id="@+id/line_2"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/margin4dp"
+            android:layout_marginStart="@dimen/margin20dp"
+            android:layout_marginEnd="@dimen/margin20dp"
+            android:background="@color/grey"
+            android:paddingBottom="@dimen/margin20dp"
+            app:layout_constraintEnd_toEndOf="@id/card_body"
+            app:layout_constraintStart_toStartOf="@id/card_body"
+            app:layout_constraintTop_toBottomOf="@id/stop_working_place" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>

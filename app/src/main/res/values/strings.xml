@@ -20,7 +20,7 @@
     <string name="tv_kecamatan">Kecamatan</string>
     <string name="tv_kelurahan">Kelurahan</string>
     <string name="tv_alamat">Alamat</string>
-    <string name="tv_status">Offline</string>
+    <string name="tv_status_offline">Offline</string>
     <string name="tv_offline_state">Anda sedang offline !</string>
     <string name="tv_askingForOnline"><![CDATA[Aktifkan & mulailah menerima job baru.]]></string>
     <string name="tv_more_routes">Anda memiliki sisa jarak yang harus di selesaikan.</string>
@@ -42,6 +42,29 @@
     <string name="tv_repeat_password">Ulangi Password</string>
     <string name="tv_phone_number">Phone Number</string>
     <string name="tv_edit_photo">Edit Foto</string>
+    <string name="tv_resend_link_desc">Belum menerima link reset password?</string>
+    <string name="tv_resend_link">Kirim Ulang</string>
+    <string name="tv_send">Kirim</string>
+    <string name="tv_new_password">Password Baru</string>
+    <string name="tv_new_password_repeat">Ulangi Password Baru</string>
+    <string name="tv_brand_label">Merk</string>
+    <string name="tv_brand">NMAX 550 CC</string>
+    <string name="tv_police_number_label">Plat Nomor</string>
+    <string name="tv_police_number">DA 1234 BBU</string>
+    <string name="tv_color_label">Warna</string>
+    <string name="tv_color">Hitam</string>
+    <string name="tv_driving_license_label">Kartu SIM</string>
+    <string name="tv_ktp_label">Kartu KTP/Pelajar</string>
+    <string name="tv_history">History</string>
+    <string name="tv_date">Pilih tanggal</string>
+    <string name="tv_total_distance_label">Total Jarak</string>
+    <string name="tv_desc_income">Pendapatan</string>
+    <string name="tv_income">Rp 20.000.000</string>
+    <string name="tv_driver_wage">Rp 15.000</string>
+    <string name="start_working_label">Mulai jalan ( %s )</string>
+    <string name="start_working_place">Teluk Tiram</string>
+    <string name="stop_working_label">Berhenti ( %s )</string>
+    <string name="stop_working_place">Pekauman</string>
 
     <!-- contentDescription strings for Image View and others -->
     <string name="iv_arrow">Arrow Action</string>
@@ -103,23 +126,16 @@
     <string name="bt_cancel">Cancel</string>
     <string name="phone_number">+62 822–1234–5678</string>
     <string name="email">yourname@email.com</string>
-    <string name="tv_brand_label">Merk</string>
-    <string name="tv_brand">NMAX 550 CC</string>
-    <string name="tv_police_number_label">Plat Nomor</string>
-    <string name="tv_police_number">DA 1234 BBU</string>
-    <string name="tv_color_label">Warna</string>
-    <string name="tv_color">Hitam</string>
-    <string name="tv_driving_license_label">Kartu SIM</string>
-    <string name="tv_ktp_label">Kartu KTP/Pelajar</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="year">Fill it with current year</string>
     <string name="ed_year">2020</string>
     <string name="tv_year">Tahun</string>
     <string name="splash_screen">Splash Screen</string>
-    <string name="tv_resend_link_desc">Belum menerima link reset password?</string>
-    <string name="tv_resend_link">Kirim Ulang</string>
-    <string name="tv_send">Kirim</string>
-    <string name="tv_new_password">Password Baru</string>
-    <string name="tv_new_password_repeat">Ulangi Password Baru</string>
+    <string name="add_icon">Add</string>
+    <string name="tv_desc_ktp">Tekan di sini untuk upload</string>
+    <string name="tv_sim_label">SIM</string>
+    <string name="tv_nomorSIM">Nomor SIM</string>
+    <string name="tv_sim">Kartu SIM</string>
+    <string name="tv_stnk">STNK</string>
+
+
 </resources>

@@ -1,4 +1,4 @@
-package com.floadsbjm.floader
+package com.floadsbjm.floader.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

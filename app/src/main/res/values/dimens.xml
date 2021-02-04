@@ -20,4 +20,11 @@
     <dimen name="margin7dp">7dp</dimen>
     <dimen name="margin67dp">67dp</dimen>
     <dimen name="text24sp">24sp</dimen>
+    <dimen name="margin10dp">10dp</dimen>
+    <dimen name="dimen30dp">30dp</dimen>
+    <dimen name="elevation8dp">8dp</dimen>
+    <dimen name="margin4dp">4dp</dimen>
+    <dimen name="dimen180dp">180dp</dimen>
+    <dimen name="dimen200dp">200dp</dimen>
+    <dimen name="dimen5dp">5dp</dimen>
 </resources>

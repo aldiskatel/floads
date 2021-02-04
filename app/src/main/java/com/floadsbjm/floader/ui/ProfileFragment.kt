@@ -18,7 +18,7 @@ import com.google.android.material.tabs.TabLayoutMediator
 class ProfileFragment : BaseFragment<ProfileViewModel, FragmentProfileBinding, BaseRepository>() {
 
     // Variable for indicating which tab user is on
-    private var currentTab: Int? = null
+    private var currentTab: Int = -1
 
     override fun getViewModel(): Class<ProfileViewModel> {
         TODO("Not yet implemented")

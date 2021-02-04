@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_loginFragment_to_dashboardFragment"
             app:destination="@id/dashboardFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_resetPasswordOneFragment"
+            app:destination="@id/resetPasswordOneFragment" />
     </fragment>
     <fragment
         android:id="@+id/fragmentRegistrationOne"
@@ -42,17 +45,32 @@
         android:id="@+id/fragmentRegistrationThree"
         android:name="com.floadsbjm.floader.ui.FragmentRegistrationThree"
         android:label="fragment_registration_three"
-        tools:layout="@layout/fragment_registration_three" />
+        tools:layout="@layout/fragment_registration_three" >
+        <action
+            android:id="@+id/action_fragmentRegistrationThree_to_phoneNumberVerificationFragment"
+            app:destination="@id/phoneNumberVerificationFragment" />
+    </fragment>
     <fragment
         android:id="@+id/dashboardFragment"
         android:name="com.floadsbjm.floader.ui.dashboard.DashboardFragment"
         android:label="fragment_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_dashboardFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_historyFragment"
+            app:destination="@id/historyFragment" />
+    </fragment>
     <fragment
         android:id="@+id/phoneNumberVerificationFragment"
         android:name="com.floadsbjm.floader.ui.PhoneNumberVerificationFragment"
         android:label="fragment_phone_number_verif"
-        tools:layout="@layout/fragment_phone_number_verif" />
+        tools:layout="@layout/fragment_phone_number_verif" >
+        <action
+            android:id="@+id/action_phoneNumberVerificationFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+    </fragment>
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.floadsbjm.floader.ui.ProfileFragment"
@@ -64,6 +82,9 @@
         <action
             android:id="@+id/action_profileFragment_to_editVehicleFragment"
             app:destination="@id/editVehicleFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
     </fragment>
     <fragment
         android:id="@+id/editProfileFragment"
@@ -82,14 +103,22 @@
         tools:layout="@layout/fragment_profile_vehicle" />
     <fragment
         android:id="@+id/editVehicleFragment"
-        android:name="com.floadsbjm.floader.EditVehicleFragment"
+        android:name="com.floadsbjm.floader.ui.EditVehicleFragment"
         android:label="fragment_edit_vehicle"
-        tools:layout="@layout/fragment_edit_vehicle" />
+        tools:layout="@layout/fragment_edit_vehicle" >
+        <action
+            android:id="@+id/action_editVehicleFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
     <fragment
         android:id="@+id/historyFragment"
         android:name="com.floadsbjm.floader.ui.HistoryFragment"
         android:label="fragment_history"
-        tools:layout="@layout/fragment_history" />
+        tools:layout="@layout/fragment_history" >
+        <action
+            android:id="@+id/action_historyFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+    </fragment>
     <fragment
         android:id="@+id/splashScreenFragment"
         android:name="com.floadsbjm.floader.ui.SplashScreenFragment"
@@ -101,12 +130,19 @@
     </fragment>
     <fragment
         android:id="@+id/resetPasswordOneFragment"
-        android:name="com.floadsbjm.floader.ResetPasswordOneFragment"
+        android:name="com.floadsbjm.floader.ui.ResetPasswordOneFragment"
         android:label="fragment_reset_password_one"
-        tools:layout="@layout/fragment_reset_password_one" />
+        tools:layout="@layout/fragment_reset_password_one" >
+        <action
+            android:id="@+id/action_resetPasswordOneFragment_to_resetPasswordTwoFragment"
+            app:destination="@id/resetPasswordTwoFragment" />
+        <action
+            android:id="@+id/action_resetPasswordOneFragment_to_phoneNumberVerificationFragment"
+            app:destination="@id/phoneNumberVerificationFragment" />
+    </fragment>
     <fragment
         android:id="@+id/resetPasswordTwoFragment"
-        android:name="com.floadsbjm.floader.ResetPasswordTwoFragment"
+        android:name="com.floadsbjm.floader.ui.ResetPasswordTwoFragment"
         android:label="fragment_reset_password_two"
         tools:layout="@layout/fragment_reset_password_two" />
 </navigation>

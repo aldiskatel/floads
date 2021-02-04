@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/iv_arrow"
+        android:id="@+id/profile_nav_drawer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin16dp"
@@ -83,7 +83,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="@dimen/dimen33dp"
-        android:background="#DADADA"
+        android:background="@color/grey_3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -93,7 +93,7 @@
         android:id="@+id/profile_tab_layout"
         app:tabTextAppearance="@style/TabLayoutTextStyle"
         android:layout_marginTop="@dimen/margin8dp"
-        android:background="#DADADA"
+        android:background="@color/grey_3"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"

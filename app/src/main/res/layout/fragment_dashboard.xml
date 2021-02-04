@@ -22,13 +22,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/manrope_bold"
+        android:text="@string/tv_status_offline"
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/bt_navDrawer"
         app:layout_constraintEnd_toStartOf="@+id/toogle_switch_status"
         app:layout_constraintStart_toEndOf="@+id/bt_navDrawer"
-        app:layout_constraintTop_toTopOf="@+id/bt_navDrawer"
-        tools:text="@string/tv_status" />
+        app:layout_constraintTop_toTopOf="@+id/bt_navDrawer" />
 
     <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/toogle_switch_status"
@@ -46,69 +46,80 @@
          @online: @string/tv_more_routes, IV_visibility False
          @JobDone: Collapse all views
     -->
-    <ImageView
-        android:id="@+id/container_view"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/status_state_notification"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/ic_container_rectangle"
-        android:contentDescription="@string/dashboard_status_container"
-        android:visibility="visible"
+        android:layout_marginTop="@dimen/margin10dp"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_status" />
+        app:layout_constraintTop_toBottomOf="@id/tv_status" >
 
-    <ImageView
-        android:id="@+id/ic_moon_offline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:background="@drawable/ic_oflline_moon"
-        android:contentDescription="@string/ic_moon_offline"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="@+id/container_view"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/container_view" />
+        <ImageView
+            android:id="@+id/container_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/ic_container_rectangle"
+            android:contentDescription="@string/dashboard_status_container"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/tv_offline_state"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="4dp"
-        android:fontFamily="@font/manrope_bold"
-        android:text="@string/tv_offline_state"
-        android:textColor="@color/white"
-        android:textSize="15sp"
-        android:visibility="visible"
-        app:layout_constraintStart_toEndOf="@id/ic_moon_offline"
-        app:layout_constraintTop_toTopOf="@id/container_view" />
+        <ImageView
+            android:id="@+id/ic_moon_offline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:background="@drawable/ic_oflline_moon"
+            android:contentDescription="@string/ic_moon_offline"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/container_view"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/container_view" />
 
-    <TextView
-        android:id="@+id/tv_askingForOnline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/manrope_regular"
-        android:text="@string/tv_askingForOnline"
-        android:textColor="@color/white"
-        android:textSize="12sp"
-        android:visibility="visible"
-        app:layout_constraintStart_toStartOf="@id/tv_offline_state"
-        app:layout_constraintTop_toBottomOf="@id/tv_offline_state" />
+        <TextView
+            android:id="@+id/tv_offline_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/manrope_bold"
+            android:text="@string/tv_offline_state"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:visibility="visible"
+            app:layout_constraintStart_toEndOf="@id/ic_moon_offline"
+            app:layout_constraintTop_toTopOf="@id/container_view" />
 
-    <TextView
-        android:id="@+id/tv_more_routes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="9dp"
-        android:fontFamily="@font/manrope_regular"
-        android:text="@string/tv_more_routes"
-        android:textColor="@color/white"
-        android:textSize="12sp"
-        android:visibility="gone"
-        app:layout_constraintStart_toStartOf="@id/container_view"
-        app:layout_constraintTop_toTopOf="@id/container_view" />
+        <TextView
+            android:id="@+id/tv_askingForOnline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/manrope_regular"
+            android:text="@string/tv_askingForOnline"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="@id/tv_offline_state"
+            app:layout_constraintTop_toBottomOf="@id/tv_offline_state" />
+
+        <TextView
+            android:id="@+id/tv_more_routes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="9dp"
+            android:fontFamily="@font/manrope_regular"
+            android:text="@string/tv_more_routes"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@id/container_view"
+            app:layout_constraintTop_toTopOf="@id/container_view" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.gms.maps.MapView
         android:id="@+id/mapView"
@@ -117,7 +128,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/container_view" />
+        app:layout_constraintTop_toBottomOf="@+id/status_state_notification" />
 
     <!-- View for Get Current Location Marker -->
     <ImageButton
