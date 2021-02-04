@@ -47,6 +47,7 @@ class  LoginFragment : BaseFragment<AuthViewModel, FragmentLoginBinding, AuthRep
 
         binding.tvResetPassword.setOnClickListener {
             // Navigates to Forgot Password Page
+            findNavController().navigate(R.id.action_loginFragment_to_resetPasswordOneFragment)
         }
 
         binding.tvDaftar.setOnClickListener {

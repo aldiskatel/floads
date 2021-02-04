@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.floadsbjm.floader.MainActivity
 import com.floadsbjm.floader.R
 import com.floadsbjm.floader.databinding.FragmentProfileBinding
 import com.floadsbjm.floader.network.BaseRepository
@@ -42,9 +43,13 @@ class ProfileFragment : BaseFragment<ProfileViewModel, FragmentProfileBinding, B
             ProfileVehicleFragment()
         )
 
+        binding.profileNavDrawer.setOnClickListener {
+            (activity as MainActivity).openCloseNavigationDrawer()
+        }
+
         // Set Click Listener to Edit's Text View. Navigates according to current view pager's page
         binding.tvEdit.setOnClickListener {
-            currentTab?.let {
+            currentTab.apply {
                 when (currentTab) {
                     0 -> findNavController().navigate(R.id.action_profileFragment_to_editProfileFragment)
                     1 -> findNavController().navigate(R.id.action_profileFragment_to_editVehicleFragment)

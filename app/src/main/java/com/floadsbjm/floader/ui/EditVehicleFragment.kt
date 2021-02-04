@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
+import com.floadsbjm.floader.R
 import com.floadsbjm.floader.databinding.FragmentEditVehicleBinding
 import com.floadsbjm.floader.network.BaseRepository
 import com.floadsbjm.floader.ui.base.BaseFragment
@@ -25,4 +27,15 @@ class EditVehicleFragment :
         TODO("Not yet implemented")
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.btNext.setOnClickListener {
+            findNavController().navigate(R.id.action_editVehicleFragment_to_editProfileDocumentsFragment)
+        }
+
+        binding.ivArrowBack.setOnClickListener {
+            findNavController().navigate(R.id.action_editVehicleFragment_to_profileFragment)
+        }
+    }
 }

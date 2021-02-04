@@ -115,7 +115,7 @@
             android:text="@string/tv_more_routes"
             android:textColor="@color/white"
             android:textSize="12sp"
-            android:visibility="gone"
+            android:visibility="invisible"
             app:layout_constraintStart_toStartOf="@id/container_view"
             app:layout_constraintTop_toTopOf="@id/container_view" />
 

@@ -9,6 +9,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
+import androidx.core.view.isVisible
+import androidx.transition.Visibility
+import com.floadsbjm.floader.MainActivity
 import com.floadsbjm.floader.R
 import com.floadsbjm.floader.databinding.FragmentDashboardBinding
 import com.google.android.gms.maps.CameraUpdateFactory
@@ -44,6 +47,32 @@ class DashboardFragment : Fragment() {
                     .icon(bitmapDescriptorFromVector(requireContext(), R.drawable.ic_marker))
             )
             it.moveCamera(CameraUpdateFactory.newLatLngZoom(LatLng(-37.813, 144.962), 18.0F))
+        }
+
+        binding.toogleSwitchStatus.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) {
+                binding.tvStatus.text = resources.getText(R.string.tv_status_online)
+                binding.apply {
+                    tvAskingForOnline.isVisible = false
+                    icMoonOffline.isVisible = false
+                    tvOfflineState.isVisible = false
+                    tvMoreRoutes.isVisible = true
+                }
+
+            } else {
+                binding.tvStatus.text = resources.getText(R.string.tv_status_offline)
+                binding.apply {
+                    tvAskingForOnline.isVisible = true
+                    icMoonOffline.isVisible = true
+                    tvOfflineState.isVisible = true
+                    tvMoreRoutes.isVisible = false
+                }
+
+            }
+        }
+
+        binding.btNavDrawer.setOnClickListener {
+            (activity as MainActivity).openCloseNavigationDrawer()
         }
 
     }

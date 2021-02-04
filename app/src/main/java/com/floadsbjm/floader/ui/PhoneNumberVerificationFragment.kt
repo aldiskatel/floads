@@ -1,7 +1,11 @@
 package com.floadsbjm.floader.ui
 
+import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
+import com.floadsbjm.floader.R
 import com.floadsbjm.floader.databinding.FragmentPhoneNumberVerifBinding
 import com.floadsbjm.floader.network.BaseRepository
 import com.floadsbjm.floader.ui.base.BaseFragment
@@ -24,13 +28,14 @@ class PhoneNumberVerificationFragment :
         TODO("Not yet implemented")
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-//    override fun onCreateView(
-//        inflater: LayoutInflater, container: ViewGroup?,
-//        savedInstanceState: Bundle?
-//    ): View? {
-//        _binding = FragmentPhoneNumberVerifBinding.inflate(inflater, container, false)
-//
+        binding.btSimpan.setOnClickListener {
+            findNavController().navigate(R.id.action_phoneNumberVerificationFragment_to_dashboardFragment)
+        }
+    }
+
 //        // TODO: IME insets work around for Android 11
 //        // Check if Android's version is lower than R
 ////        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.R) {

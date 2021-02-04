@@ -59,12 +59,13 @@
     <string name="tv_date">Pilih tanggal</string>
     <string name="tv_total_distance_label">Total Jarak</string>
     <string name="tv_desc_income">Pendapatan</string>
-    <string name="tv_income">Rp 20.000.000</string>
+    <string name="tv_income">Rp 20.000.00</string>
     <string name="tv_driver_wage">Rp 15.000</string>
     <string name="start_working_label">Mulai jalan ( %s )</string>
     <string name="start_working_place">Teluk Tiram</string>
     <string name="stop_working_label">Berhenti ( %s )</string>
     <string name="stop_working_place">Pekauman</string>
+    <string name="tv_date_placeholder">%s</string>
 
     <!-- contentDescription strings for Image View and others -->
     <string name="iv_arrow">Arrow Action</string>
@@ -136,6 +137,7 @@
     <string name="tv_nomorSIM">Nomor SIM</string>
     <string name="tv_sim">Kartu SIM</string>
     <string name="tv_stnk">STNK</string>
+    <string name="tv_status_online">Online</string>
 
 
 </resources>

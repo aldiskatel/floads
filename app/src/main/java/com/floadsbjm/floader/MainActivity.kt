@@ -4,9 +4,12 @@ import android.annotation.SuppressLint
 import android.graphics.Rect
 import android.os.Bundle
 import android.view.MotionEvent
+import android.view.View
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.floadsbjm.floader.databinding.ActivityMainBinding
@@ -25,8 +28,8 @@ class MainActivity : AppCompatActivity() {
 
     private var items = arrayListOf(
         NavigationDrawerItemModel(1, R.drawable.ic_home, "Home"),
-        NavigationDrawerItemModel(2, R.drawable.ic_history, "History"),
-        NavigationDrawerItemModel(3, R.drawable.ic_wallet, "Dompet Ku"),
+        NavigationDrawerItemModel(2, R.drawable.ic_wallet, "Dompet Ku"),
+        NavigationDrawerItemModel(3, R.drawable.ic_history, "History"),
         NavigationDrawerItemModel(4, R.drawable.ic_setting, "Pengaturan"),
         NavigationDrawerItemModel(5, R.drawable.ic_logout, "Logout"),
     )
@@ -52,7 +55,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         initRecyclerView()
-        updateAdapter()
+        updateAdapter(navController)
 
     }
 
@@ -63,7 +66,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun updateAdapter() {
+    private fun updateAdapter(navController: NavController) {
         adapter = NavDrawerAdapter(items)
         binding.rvDrawerMenu.adapter = adapter
 
@@ -72,21 +75,34 @@ class MainActivity : AppCompatActivity() {
         // @TODO: Might want to add highlight on selected row
         adapter.setOnItemClickListener {
             when (it.id) {
-                1 -> binding.root.snackBar("Home is selected")
-                2 -> binding.root.snackBar("History is selected")
-                3 -> binding.root.snackBar("Dompet Ku is selected")
+                1 -> {
+                    navController.navigate(R.id.dashboardFragment)
+                    openCloseNavigationDrawer()
+                }
+                2 -> binding.root.snackBar("Payment is selected")
+                3 -> {
+                    navController.navigate(R.id.historyFragment)
+                    openCloseNavigationDrawer()
+                }
                 4 -> binding.root.snackBar("Pengaturan is selected")
                 5 -> binding.root.snackBar("Logout is selected")
             }
         }
     }
 
-
     private fun setDrawerLocked(enabled: Boolean) {
         if (enabled) {
             drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED)
         } else {
             drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED)
+        }
+    }
+
+    fun openCloseNavigationDrawer() {
+        if (binding.drawerLayout.isDrawerOpen(GravityCompat.START)) {
+            binding.drawerLayout.closeDrawer(GravityCompat.START)
+        } else {
+            binding.drawerLayout.openDrawer(GravityCompat.START)
         }
     }
 
