@@ -3,38 +3,175 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/loginFragment">
+    app:startDestination="@id/splashScreenFragment">
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.floadsbjm.driver.ui.LoginFragment"
+        android:name="com.floadsbjm.floader.ui.LoginFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" >
+        tools:layout="@layout/fragment_login">
         <action
             android:id="@+id/action_loginFragment_to_fragmentRegistrationOne"
             app:destination="@id/fragmentRegistrationOne" />
+        <action
+            android:id="@+id/action_loginFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_resetPasswordOneFragment"
+            app:destination="@id/resetPasswordOneFragment" />
     </fragment>
     <fragment
         android:id="@+id/fragmentRegistrationOne"
-        android:name="com.floadsbjm.driver.ui.FragmentRegistrationOne"
+        android:name="com.floadsbjm.floader.ui.FragmentRegistrationOne"
         android:label="fragment_registration_one"
-        tools:layout="@layout/fragment_registration_one" >
+        tools:layout="@layout/fragment_registration_one">
         <action
             android:id="@+id/action_fragmentRegistrationOne_to_fragmentRegistrationTwo"
             app:destination="@id/fragmentRegistrationTwo" />
+        <action
+            android:id="@+id/action_fragmentRegistrationOne_to_loginFragment"
+            app:destination="@id/loginFragment" />
     </fragment>
     <fragment
         android:id="@+id/fragmentRegistrationTwo"
-        android:name="com.floadsbjm.driver.ui.FragmentRegistrationTwo"
+        android:name="com.floadsbjm.floader.ui.FragmentRegistrationTwo"
         android:label="fragment_registration_two"
-        tools:layout="@layout/fragment_registration_two" >
+        tools:layout="@layout/fragment_registration_two">
         <action
             android:id="@+id/action_fragmentRegistrationTwo_to_fragmentRegistrationThree"
             app:destination="@id/fragmentRegistrationThree" />
+        <action
+            android:id="@+id/action_fragmentRegistrationTwo_to_fragmentRegistrationOne"
+            app:destination="@id/fragmentRegistrationOne" />
     </fragment>
     <fragment
         android:id="@+id/fragmentRegistrationThree"
-        android:name="com.floadsbjm.driver.ui.FragmentRegistrationThree"
+        android:name="com.floadsbjm.floader.ui.FragmentRegistrationThree"
         android:label="fragment_registration_three"
-        tools:layout="@layout/fragment_registration_three" />
+        tools:layout="@layout/fragment_registration_three">
+        <action
+            android:id="@+id/action_fragmentRegistrationThree_to_phoneNumberVerificationFragment"
+            app:destination="@id/phoneNumberVerificationFragment" />
+        <action
+            android:id="@+id/action_fragmentRegistrationThree_to_fragmentRegistrationTwo"
+            app:destination="@id/fragmentRegistrationTwo" />
+    </fragment>
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.floadsbjm.floader.ui.dashboard.DashboardFragment"
+        android:label="fragment_dashboard"
+        tools:layout="@layout/fragment_dashboard">
+        <action
+            android:id="@+id/action_dashboardFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_historyFragment"
+            app:destination="@id/historyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/phoneNumberVerificationFragment"
+        android:name="com.floadsbjm.floader.ui.PhoneNumberVerificationFragment"
+        android:label="fragment_phone_number_verif"
+        tools:layout="@layout/fragment_phone_number_verif">
+        <action
+            android:id="@+id/action_phoneNumberVerificationFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.floadsbjm.floader.ui.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profileFragment_to_editProfileFragment"
+            app:destination="@id/editProfileFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_editVehicleFragment"
+            app:destination="@id/editVehicleFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.floadsbjm.floader.ui.EditProfileFragment"
+        android:label="fragment_edit_profile"
+        tools:layout="@layout/fragment_edit_profile" >
+        <action
+            android:id="@+id/action_editProfileFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileInformationFragment"
+        android:name="com.floadsbjm.floader.ui.ProfileInformationFragment"
+        android:label="fragment_profile_information"
+        tools:layout="@layout/fragment_profile_information" />
+    <fragment
+        android:id="@+id/profileVehicleFragment"
+        android:name="com.floadsbjm.floader.ui.ProfileVehicleFragment"
+        android:label="fragment_profile_vehicle"
+        tools:layout="@layout/fragment_profile_vehicle" />
+    <fragment
+        android:id="@+id/editVehicleFragment"
+        android:name="com.floadsbjm.floader.ui.EditVehicleFragment"
+        android:label="fragment_edit_vehicle"
+        tools:layout="@layout/fragment_edit_vehicle">
+        <action
+            android:id="@+id/action_editVehicleFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_editVehicleFragment_to_editProfileDocumentsFragment"
+            app:destination="@id/editProfileDocumentsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.floadsbjm.floader.ui.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history">
+        <action
+            android:id="@+id/action_historyFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="com.floadsbjm.floader.ui.SplashScreenFragment"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen">
+        <action
+            android:id="@+id/action_splashScreenFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resetPasswordOneFragment"
+        android:name="com.floadsbjm.floader.ui.ResetPasswordOneFragment"
+        android:label="fragment_reset_password_one"
+        tools:layout="@layout/fragment_reset_password_one">
+        <action
+            android:id="@+id/action_resetPasswordOneFragment_to_resetPasswordTwoFragment"
+            app:destination="@id/resetPasswordTwoFragment" />
+        <action
+            android:id="@+id/action_resetPasswordOneFragment_to_phoneNumberVerificationFragment"
+            app:destination="@id/phoneNumberVerificationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resetPasswordTwoFragment"
+        android:name="com.floadsbjm.floader.ui.ResetPasswordTwoFragment"
+        android:label="fragment_reset_password_two"
+        tools:layout="@layout/fragment_reset_password_two" >
+        <action
+            android:id="@+id/action_resetPasswordTwoFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editProfileDocumentsFragment"
+        android:name="com.floadsbjm.floader.EditProfileDocumentsFragment"
+        android:label="fragment_edit_profile_documents"
+        tools:layout="@layout/fragment_edit_profile_documents">
+        <action
+            android:id="@+id/action_editProfileDocumentsFragment_to_editVehicleFragment"
+            app:destination="@id/editVehicleFragment" />
+        <action
+            android:id="@+id/action_editProfileDocumentsFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
 </navigation>

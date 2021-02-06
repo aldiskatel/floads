@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="54dp">
+
+    <ImageView
+        android:id="@+id/iv_home_icon"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:contentDescription="@string/nav_home"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:background="@drawable/ic_home" />
+
+    <TextView
+        android:id="@+id/tv_home"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:fontFamily="@font/manrope_bold"
+        android:text="@string/nav_home"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_home_icon"
+        app:layout_constraintStart_toEndOf="@+id/iv_home_icon"
+        app:layout_constraintTop_toTopOf="@+id/iv_home_icon" />
+
+    <ImageView
+        android:id="@+id/iv_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="190dp"
+        android:background="@drawable/ic_arrow_right"
+        android:backgroundTint="@color/black"
+        android:contentDescription="@string/iv_arrow"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_home_icon"
+        app:layout_constraintStart_toEndOf="@+id/iv_home_icon"
+        app:layout_constraintTop_toTopOf="@+id/iv_home_icon" />
+
+    <View
+        android:id="@+id/view_separator"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="9dp"
+        android:background="@color/dark_white"
+        app:layout_constraintEnd_toEndOf="@+id/iv_arrow"
+        app:layout_constraintStart_toStartOf="@+id/iv_home_icon"
+        app:layout_constraintTop_toBottomOf="@+id/iv_home_icon" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

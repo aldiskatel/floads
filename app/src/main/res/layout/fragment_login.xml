@@ -1,291 +1,297 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.LoginFragment">
 
-    <TextView
-        android:id="@+id/tv_masuk"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="29dp"
-        android:layout_marginTop="78dp"
-        android:fontFamily="@font/manrope_bold"
-        android:text="@string/tv_masuk"
-        android:textColor="@color/black"
-        android:textSize="50sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tv_welcome"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="60dp"
-        android:fontFamily="@font/manrope_regular"
-        android:text="@string/tv_welcome"
-        android:textColor="@color/black"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="@+id/tv_masuk"
-        app:layout_constraintTop_toTopOf="@+id/tv_masuk" />
-
-    <TextView
-        android:id="@+id/tv_email"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="33dp"
-        android:layout_marginTop="30dp"
-        android:fontFamily="@font/manrope_regular"
-        android:text="@string/tv_email"
-        android:textColor="@color/dim_grey"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_welcome" />
-
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/email_bar"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="9dp"
-        android:layout_marginEnd="33dp"
-        android:background="@drawable/ic_edit_text_bar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@id/tv_email"
-        app:layout_constraintTop_toBottomOf="@id/tv_email">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-        <EditText
-            android:id="@+id/et_email"
+        <TextView
+            android:id="@+id/tv_masuk"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="13dp"
-            android:layout_marginEnd="12dp"
-            android:layout_marginBottom="14dp"
-            android:importantForAutofill="no"
-            android:background="@android:color/transparent"
-            android:fontFamily="@font/manrope_regular"
-            android:hint="@string/hint_email"
-            android:inputType="textEmailAddress"
-            android:textColor="@color/grey"
-            android:textSize="12sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/ic_email"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/ic_email"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12.5dp"
-            android:layout_marginEnd="13.38dp"
-            android:background="@drawable/ic_email"
-            android:contentDescription="@string/ic_email"
+            android:layout_marginStart="29dp"
+            android:layout_marginTop="78dp"
+            android:fontFamily="@font/manrope_bold"
+            android:text="@string/tv_masuk"
+            android:textColor="@color/black"
+            android:textSize="50sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <TextView
-        android:id="@+id/tv_password"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="33dp"
-        android:layout_marginTop="20dp"
-        android:fontFamily="@font/manrope_regular"
-        android:text="@string/tv_password"
-        android:textColor="@color/dim_grey"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email_bar" />
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/password_bar"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="9dp"
-        android:layout_marginEnd="33dp"
-        android:background="@drawable/ic_edit_text_bar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@id/tv_password"
-        app:layout_constraintTop_toBottomOf="@id/tv_password">
-
-        <EditText
-            android:id="@+id/et_password"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="13dp"
-            android:layout_marginEnd="12dp"
-            android:layout_marginBottom="14dp"
-            android:importantForAutofill="no"
-            android:background="@android:color/transparent"
-            android:fontFamily="@font/manrope_regular"
-            android:hint="@string/hint_password"
-            android:inputType="textPassword"
-            android:textColor="@color/grey"
-            android:textSize="12sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/ic_password"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:id="@+id/ic_password"
-            android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/tv_welcome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="60dp"
+            android:fontFamily="@font/manrope_regular"
+            android:text="@string/tv_welcome"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/tv_masuk"
+            app:layout_constraintTop_toTopOf="@+id/tv_masuk" />
+
+        <TextView
+            android:id="@+id/tv_color"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="33dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/manrope_regular"
+            android:text="@string/tv_email"
+            android:textColor="@color/dim_grey"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_welcome" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/email_bar"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="9dp"
-            android:layout_marginEnd="10dp"
-            android:background="@drawable/ic_password"
-            android:contentDescription="@string/ic_email"
+            android:layout_marginEnd="33dp"
+            android:background="@drawable/ic_edit_text_bar"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintStart_toStartOf="@id/tv_color"
+            app:layout_constraintTop_toBottomOf="@id/tv_color">
+
+            <EditText
+                android:id="@+id/et_email"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="14dp"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/manrope_regular"
+                android:hint="@string/hint_email"
+                android:importantForAutofill="no"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/grey"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/ic_email"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ic_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12.5dp"
+                android:layout_marginEnd="13.38dp"
+                android:background="@drawable/ic_email"
+                android:contentDescription="@string/ic_email"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tv_new_password"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="33dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/manrope_regular"
+            android:text="@string/tv_password"
+            android:textColor="@color/dim_grey"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/email_bar" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/password_bar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="33dp"
+            android:background="@drawable/ic_edit_text_bar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tv_new_password"
+            app:layout_constraintTop_toBottomOf="@id/tv_new_password">
+
+            <EditText
+                android:id="@+id/et_password"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="14dp"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/manrope_regular"
+                android:hint="@string/hint_password"
+                android:importantForAutofill="no"
+                android:inputType="textPassword"
+                android:textColor="@color/grey"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/ic_password"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ic_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/ic_password"
+                android:contentDescription="@string/ic_password"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tv_prefix_forgotPass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/manrope_regular"
+            android:text="@string/tv_prefix_forgotPass"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@id/password_bar"
+            app:layout_constraintTop_toBottomOf="@id/password_bar" />
+
+        <TextView
+            android:id="@+id/tv_reset_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/manrope_bold"
+            android:text="@string/tv_reset_password"
+            android:textColor="@color/light_red"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@id/tv_prefix_forgotPass"
+            app:layout_constraintTop_toBottomOf="@id/password_bar" />
+
+        <Button
+            android:id="@+id/bt_masuk"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="33dp"
+            android:layout_marginTop="82dp"
+            android:layout_marginEnd="33dp"
+            android:background="@drawable/ic_rectangle_bar"
+            android:fontFamily="@font/manrope_medium"
+            android:letterSpacing="0.02"
+            android:text="@string/bt_masuk"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_reset_password" />
+
+        <TextView
+            android:id="@+id/tv_no_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:fontFamily="@font/manrope_regular"
+            android:text="@string/tv_no_account"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@id/password_bar"
+            app:layout_constraintTop_toBottomOf="@id/bt_masuk" />
+
+        <TextView
+            android:id="@+id/tv_daftar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="11dp"
+            android:fontFamily="@font/manrope_bold"
+            android:text="@string/tv_daftar"
+            android:textColor="@color/light_red"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@id/tv_no_account"
+            app:layout_constraintTop_toBottomOf="@id/bt_masuk" />
+
+        <View
+            android:id="@+id/line_2"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="13.5dp"
+            android:layout_marginEnd="33dp"
+            android:background="@color/grey"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_atau"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_atau"
+            app:layout_constraintTop_toTopOf="@+id/tv_atau" />
+
+        <View
+            android:id="@+id/line_1"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="33dp"
+            android:layout_marginTop="25dp"
+            android:background="@color/grey"
+            app:layout_constraintEnd_toStartOf="@+id/tv_atau"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_no_account" />
+
+        <TextView
+            android:id="@+id/tv_atau"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="13.5dp"
+            android:fontFamily="@font/manrope_regular"
+            android:text="@string/tv_atau"
+            android:textColor="@color/grey"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/line_1"
+            app:layout_constraintEnd_toStartOf="@+id/line_2"
+            app:layout_constraintStart_toEndOf="@+id/line_1"
+            app:layout_constraintTop_toTopOf="@+id/line_1" />
+
+        <Button
+            android:id="@+id/bt_facebookLogin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="33dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="33dp"
+            android:backgroundTint="@color/dark_blue"
+            android:fontFamily="@font/manrope_medium"
+            android:letterSpacing="0.02"
+            android:paddingStart="99dp"
+            android:paddingTop="12dp"
+            android:paddingEnd="37dp"
+            android:paddingBottom="11dp"
+            android:text="@string/bt_facebook"
+            android:textAllCaps="false"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_atau" />
+
+        <ImageView
+            android:id="@+id/iv_facebook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="46dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="7dp"
+            android:background="@drawable/ic_facebook"
+            android:contentDescription="@string/facebook_login"
+            android:elevation="2dp"
+            app:layout_constraintBottom_toBottomOf="@+id/bt_facebookLogin"
+            app:layout_constraintStart_toStartOf="@+id/bt_facebookLogin"
+            app:layout_constraintTop_toTopOf="@+id/bt_facebookLogin" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <TextView
-        android:id="@+id/tv_prefix_forgotPass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:fontFamily="@font/manrope_regular"
-        android:text="@string/tv_prefix_forgotPass"
-        android:textColor="@color/black"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="@id/password_bar"
-        app:layout_constraintTop_toBottomOf="@id/password_bar" />
-
-    <TextView
-        android:id="@+id/tv_reset_password"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="20dp"
-        android:fontFamily="@font/manrope_bold"
-        android:text="@string/tv_reset_password"
-        android:textColor="@color/light_red"
-        android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@id/tv_prefix_forgotPass"
-        app:layout_constraintTop_toBottomOf="@id/password_bar" />
-
-    <Button
-        android:id="@+id/bt_masuk"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="33dp"
-        android:layout_marginTop="82dp"
-        android:layout_marginEnd="33dp"
-        android:background="@drawable/ic_rectangle_bar"
-        android:fontFamily="@font/manrope_medium"
-        android:letterSpacing="0.02"
-        android:text="@string/bt_masuk"
-        android:textAllCaps="false"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_reset_password" />
-
-    <TextView
-        android:id="@+id/tv_no_account"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="11dp"
-        android:fontFamily="@font/manrope_regular"
-        android:text="@string/tv_no_account"
-        android:textColor="@color/black"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="@id/password_bar"
-        app:layout_constraintTop_toBottomOf="@id/bt_masuk" />
-
-    <TextView
-        android:id="@+id/tv_daftar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="11dp"
-        android:fontFamily="@font/manrope_bold"
-        android:text="@string/tv_daftar"
-        android:textColor="@color/light_red"
-        android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@id/tv_no_account"
-        app:layout_constraintTop_toBottomOf="@id/bt_masuk" />
-
-    <View
-        android:id="@+id/line_2"
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:layout_marginStart="13.5dp"
-        android:layout_marginEnd="33dp"
-        android:background="@color/grey"
-        app:layout_constraintBottom_toBottomOf="@+id/tv_atau"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tv_atau"
-        app:layout_constraintTop_toTopOf="@+id/tv_atau" />
-
-    <View
-        android:id="@+id/line_1"
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:layout_marginStart="33dp"
-        android:layout_marginTop="25dp"
-        android:background="@color/grey"
-        app:layout_constraintEnd_toStartOf="@+id/tv_atau"
-        app:layout_constraintHorizontal_chainStyle="spread_inside"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_no_account" />
-
-    <TextView
-        android:id="@+id/tv_atau"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="13.5dp"
-        android:fontFamily="@font/manrope_regular"
-        android:text="@string/tv_atau"
-        android:textColor="@color/grey"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="@+id/line_1"
-        app:layout_constraintEnd_toStartOf="@+id/line_2"
-        app:layout_constraintStart_toEndOf="@+id/line_1"
-        app:layout_constraintTop_toTopOf="@+id/line_1" />
-
-    <Button
-        android:id="@+id/bt_facebookLogin"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="33dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="33dp"
-        android:backgroundTint="@color/dark_blue"
-        android:fontFamily="@font/manrope_medium"
-        android:letterSpacing="0.02"
-        android:paddingStart="99dp"
-        android:paddingTop="12dp"
-        android:paddingEnd="37dp"
-        android:paddingBottom="11dp"
-        android:text="@string/bt_facebook"
-        android:textAllCaps="false"
-        android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_atau" />
-
-    <ImageView
-        android:id="@+id/iv_facebook"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="46dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="7dp"
-        android:background="@drawable/ic_facebook"
-        android:contentDescription="@string/facebook_login"
-        android:elevation="2dp"
-        app:layout_constraintBottom_toBottomOf="@+id/bt_facebookLogin"
-        app:layout_constraintStart_toStartOf="@+id/bt_facebookLogin"
-        app:layout_constraintTop_toTopOf="@+id/bt_facebookLogin" />
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

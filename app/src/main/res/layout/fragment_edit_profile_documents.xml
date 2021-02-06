@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cloud"
+    tools:context=".EditProfileDocumentsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/margin24dp">
+
+        <ImageView
+            android:id="@+id/iv_arrow_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin16dp"
+            android:layout_marginTop="@dimen/margin24dp"
+            android:background="@drawable/ic_arrow"
+            android:contentDescription="@string/iv_arrow"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_ktp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin16dp"
+            android:layout_marginTop="@dimen/margin16dp"
+            android:fontFamily="@font/manrope_regular"
+            android:text="@string/tv_ktp_label"
+            android:textColor="@color/dim_grey"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_arrow_back" />
+
+        <ImageView
+            android:id="@+id/tv_ktp_container"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="@dimen/margin16dp"
+            android:background="@drawable/ic_rectangle_bar"
+            android:backgroundTint="@color/white"
+            android:contentDescription="@string/tv_brand"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_ktp" />
+
+        <EditText
+            android:id="@+id/ed_ktp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/manrope_bold"
+            android:hint="@string/tv_nomorKTP"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:textColor="@color/dim_grey"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_ktp_container"
+            app:layout_constraintEnd_toEndOf="@+id/tv_ktp_container"
+            app:layout_constraintStart_toStartOf="@+id/tv_ktp_container"
+            app:layout_constraintTop_toTopOf="@+id/tv_ktp_container" />
+
+        <LinearLayout
+            android:id="@+id/ktp_upload"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin16dp"
+            android:layout_marginStart="@dimen/margin16dp"
+            android:layout_marginEnd="@dimen/margin16dp"
+            android:background="@drawable/dashed_rectangle"
+            android:orientation="vertical"
+            android:padding="@dimen/margin24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_ktp_container">
+
+            <ImageView
+                android:id="@+id/ic_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_add"
+                android:contentDescription="@string/add_icon" />
+
+            <TextView
+                android:id="@+id/tv_desc_ktp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_desc_ktp"
+                android:fontFamily="@font/manrope_regular"
+                android:textSize="@dimen/font16"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:id="@+id/tv_desc_ktp2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin24dp"
+                android:text="@string/tv_ktp_label"
+                android:fontFamily="@font/manrope_bold"
+                android:textSize="@dimen/font24"
+                android:layout_gravity="center" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_sim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin16dp"
+            android:layout_marginTop="@dimen/margin16dp"
+            android:fontFamily="@font/manrope_regular"
+            android:text="@string/tv_sim_label"
+            android:textColor="@color/dim_grey"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ktp_upload" />
+
+        <ImageView
+            android:id="@+id/tv_sim_container"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="@dimen/margin16dp"
+            android:background="@drawable/ic_rectangle_bar"
+            android:backgroundTint="@color/white"
+            android:contentDescription="@string/tv_brand"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_sim" />
+
+        <EditText
+            android:id="@+id/ed_sim"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/manrope_bold"
+            android:hint="@string/tv_nomorSIM"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:textColor="@color/dim_grey"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_sim_container"
+            app:layout_constraintEnd_toEndOf="@+id/tv_sim_container"
+            app:layout_constraintStart_toStartOf="@+id/tv_sim_container"
+            app:layout_constraintTop_toTopOf="@+id/tv_sim_container" />
+
+        <LinearLayout
+            android:id="@+id/sim_upload"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin16dp"
+            android:layout_marginStart="@dimen/margin16dp"
+            android:layout_marginEnd="@dimen/margin16dp"
+            android:background="@drawable/dashed_rectangle"
+            android:orientation="vertical"
+            android:padding="@dimen/margin24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_sim_container">
+
+            <ImageView
+                android:id="@+id/ic_add_sim"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_add"
+                android:contentDescription="@string/add_icon" />
+
+            <TextView
+                android:id="@+id/tv_desc_sim"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_desc_ktp"
+                android:fontFamily="@font/manrope_regular"
+                android:textSize="@dimen/font16"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:id="@+id/tv_desc_sim2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin24dp"
+                android:text="@string/tv_sim"
+                android:fontFamily="@font/manrope_bold"
+                android:textSize="@dimen/font24"
+                android:layout_gravity="center" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_stnk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin16dp"
+            android:layout_marginTop="@dimen/margin16dp"
+            android:fontFamily="@font/manrope_regular"
+            android:text="@string/tv_stnk"
+            android:textColor="@color/dim_grey"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sim_upload" />
+
+        <LinearLayout
+            android:id="@+id/stnk_upload"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin16dp"
+            android:layout_marginStart="@dimen/margin16dp"
+            android:layout_marginEnd="@dimen/margin16dp"
+            android:background="@drawable/dashed_rectangle"
+            android:orientation="vertical"
+            android:padding="@dimen/margin24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_stnk">
+
+            <ImageView
+                android:id="@+id/ic_add_stnk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_add"
+                android:contentDescription="@string/add_icon" />
+
+            <TextView
+                android:id="@+id/tv_desc_stnk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_desc_ktp"
+                android:fontFamily="@font/manrope_regular"
+                android:textSize="@dimen/font16"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:id="@+id/tv_desc_stnk2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin24dp"
+                android:text="@string/tv_stnk"
+                android:fontFamily="@font/manrope_bold"
+                android:textSize="@dimen/font24"
+                android:layout_gravity="center" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_line_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen40dp"
+            android:layout_marginEnd="@dimen/dimen10dp"
+            android:layout_marginBottom="@dimen/dimen33dp"
+            android:background="@drawable/ic_line_unfilled"
+            android:contentDescription="@string/line_defines_screen"
+            app:layout_constraintEnd_toStartOf="@+id/iv_line_two"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/stnk_upload" />
+
+        <ImageView
+            android:id="@+id/iv_line_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen40dp"
+            android:layout_marginBottom="@dimen/dimen33dp"
+            android:background="@drawable/ic_line_filled"
+            android:contentDescription="@string/line_defines_screen"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_line_one"
+            app:layout_constraintTop_toBottomOf="@id/stnk_upload" />
+
+        <Button
+            android:id="@+id/profile_bt_simpan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin16dp"
+            android:layout_marginTop="@dimen/dimen33dp"
+            android:layout_marginEnd="@dimen/margin16dp"
+            android:paddingTop="@dimen/dimen10dp"
+            android:paddingBottom="@dimen/dimen10dp"
+            android:backgroundTint="@color/dim_grey"
+            android:fontFamily="@font/manrope_regular"
+            android:letterSpacing="0"
+            android:text="@string/bt_simpan"
+            android:textAllCaps="false"
+            android:textSize="@dimen/font24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_line_one" />
+
+        <android.widget.Button
+            android:id="@+id/profile_bt_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin11dp"
+            android:background="@drawable/rectangle_with_stroke"
+            android:fontFamily="@font/manrope_regular"
+            android:letterSpacing="0"
+            android:text="@string/bt_cancel"
+            android:textAllCaps="false"
+            android:textColor="@color/dim_grey"
+            android:textSize="@dimen/font24"
+            app:layout_constraintEnd_toEndOf="@id/profile_bt_simpan"
+            app:layout_constraintStart_toStartOf="@id/profile_bt_simpan"
+            app:layout_constraintTop_toBottomOf="@id/profile_bt_simpan"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

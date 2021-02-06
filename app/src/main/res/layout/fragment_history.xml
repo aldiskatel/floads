@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_white"
+    tools:context=".ui.HistoryFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/history_header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="@dimen/elevation8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/history_nav_drawer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin16dp"
+            android:layout_marginTop="@dimen/dimen40dp"
+            android:background="@drawable/ic_burger_bar"
+            android:contentDescription="@null"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_history"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/manrope_bold"
+            android:text="@string/tv_history"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@id/history_nav_drawer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/history_nav_drawer" />
+
+        <ImageView
+            android:id="@+id/date_picker_container"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin16dp"
+            android:layout_marginTop="@dimen/dimen30dp"
+            android:layout_marginBottom="@dimen/dimen30dp"
+            android:background="@drawable/ic_edit_text_bar"
+            android:contentDescription="@string/container_editText"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/calendar_icon_container"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_history" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin16dp"
+            android:fontFamily="@font/manrope_regular"
+            android:text="@string/tv_date"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/date_picker_container"
+            app:layout_constraintStart_toStartOf="@+id/date_picker_container"
+            app:layout_constraintTop_toTopOf="@+id/date_picker_container" />
+
+        <ImageView
+            android:id="@+id/calendar_icon_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin16dp"
+            android:background="@drawable/ic_sub_rectangle"
+            android:contentDescription="@null"
+            android:rotation="180"
+            app:layout_constraintBottom_toBottomOf="@id/date_picker_container"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/date_picker_container" />
+
+        <ImageView
+            android:id="@+id/calendar_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_calendar"
+            android:backgroundTint="@color/black"
+            android:contentDescription="@string/tv_date"
+            app:layout_constraintBottom_toBottomOf="@id/calendar_icon_container"
+            app:layout_constraintEnd_toEndOf="@id/calendar_icon_container"
+            app:layout_constraintStart_toStartOf="@id/calendar_icon_container"
+            app:layout_constraintTop_toTopOf="@id/calendar_icon_container" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/calendar_container"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/margin4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/history_header">
+
+        <com.michalsvec.singlerowcalendar.calendar.SingleRowCalendar
+            android:id="@+id/main_single_row_calendar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:deselection="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent"
+            app:longPress="false"
+            app:multiSelection="false" />
+
+        <Button
+            android:id="@+id/btnRight"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/ic_arrow_right"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnLeft"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:rotation="180"
+            android:background="@drawable/ic_arrow_right"
+            app:layout_constraintBottom_toBottomOf="@+id/btnRight"
+            app:layout_constraintEnd_toStartOf="@+id/btnRight"
+            app:layout_constraintTop_toTopOf="@+id/btnRight" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/total_distance_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin16dp"
+        android:layout_marginTop="@dimen/margin24dp"
+        android:background="@drawable/ic_rectangle_small"
+        android:contentDescription="@null"
+        app:layout_constraintEnd_toStartOf="@+id/income_container"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/history_header" />
+
+    <ImageView
+        android:id="@+id/ic_distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen10dp"
+        android:background="@drawable/ic_route"
+        android:contentDescription="@null"
+        app:layout_constraintBottom_toBottomOf="@id/total_distance_container"
+        app:layout_constraintStart_toStartOf="@id/total_distance_container"
+        app:layout_constraintTop_toTopOf="@id/total_distance_container" />
+
+    <TextView
+        android:id="@+id/tv_desc_total_distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin20dp"
+        android:layout_marginTop="@dimen/margin16dp"
+        android:fontFamily="@font/manrope_regular"
+        android:text="@string/tv_total_distance_label"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text12sp"
+        app:layout_constraintStart_toEndOf="@+id/ic_distance"
+        app:layout_constraintTop_toTopOf="@+id/total_distance_container" />
+
+    <TextView
+        android:id="@+id/tv_total_distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin4dp"
+        android:fontFamily="@font/manrope_bold"
+        android:text="@string/tv_total_distance"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font16"
+        app:layout_constraintStart_toStartOf="@id/tv_desc_total_distance"
+        app:layout_constraintTop_toBottomOf="@id/tv_desc_total_distance" />
+
+    <ImageView
+        android:id="@+id/income_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin20dp"
+        android:layout_marginTop="@dimen/margin24dp"
+        android:layout_marginEnd="@dimen/margin16dp"
+        android:background="@drawable/ic_rectangle_small"
+        android:contentDescription="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/total_distance_container"
+        app:layout_constraintTop_toBottomOf="@id/history_header" />
+
+    <ImageView
+        android:id="@+id/ic_income"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen10dp"
+        android:background="@drawable/ic_income"
+        android:contentDescription="@null"
+        app:layout_constraintBottom_toBottomOf="@id/income_container"
+        app:layout_constraintStart_toStartOf="@id/income_container"
+        app:layout_constraintTop_toTopOf="@id/income_container" />
+
+    <TextView
+        android:id="@+id/tv_desc_income"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin20dp"
+        android:layout_marginTop="@dimen/margin16dp"
+        android:fontFamily="@font/manrope_regular"
+        android:text="@string/tv_desc_income"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text12sp"
+        app:layout_constraintStart_toEndOf="@id/ic_income"
+        app:layout_constraintTop_toTopOf="@id/income_container" />
+
+    <TextView
+        android:id="@+id/tv_income"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin4dp"
+        android:fontFamily="@font/manrope_bold"
+        android:text="@string/tv_income"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font16"
+        app:layout_constraintStart_toStartOf="@id/tv_desc_income"
+        app:layout_constraintTop_toBottomOf="@id/tv_desc_income" />
+
+    <include
+        android:id="@+id/card_profile"
+        layout="@layout/card_history_layout"
+        android:layout_margin="@dimen/margin16dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/total_distance_container" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

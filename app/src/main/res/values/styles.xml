@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TabLayoutTextStyle" parent="Widget.MaterialComponents.TabLayout">
+        <item name="android:fontFamily">@font/manrope_bold</item>
+        <item name="android:textSize">@dimen/font16</item>
+        <item name="android:textColor">@color/dim_grey</item>
+        <item name="tabIndicatorColor">@color/black</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+</resources>

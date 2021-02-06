@@ -1,0 +1,7 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/ic_toogle_thumb_off" android:state_checked="false" />
+    <item android:drawable="@drawable/ic_toogle_thumb_on" android:state_checked="true" />
+
+</selector>
+
